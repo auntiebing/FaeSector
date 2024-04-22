@@ -1,0 +1,188 @@
+{
+  "hullName": "Lupine",
+  "hullId": "faesector_lupine",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/Lupine.png",
+  "style": "MIDLINE",
+  "height": 313,
+  "width": 224,
+  "center": [111, 155.5],
+  "collisionRadius": 200,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 168,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "LS1",
+      "size": "LARGE",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 320,
+      "angle": 0,
+      "locations": [64.5, -0]
+    },
+    {
+      "id": "MS1",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 205,
+      "angle": 0,
+      "locations": [99.5, -32]
+    },
+    {
+      "id": "MS2",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 205,
+      "angle": -0,
+      "locations": [99.5, 32]
+    },
+    {
+      "id": "SM1",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [128.5, -24]
+    },
+    {
+      "id": "SM2",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -0,
+      "locations": [128.5, 24]
+    },
+    {
+      "id": "MS3",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 183,
+      "angle": -90,
+      "locations": [30.5, -24]
+    },
+    {
+      "id": "MS4",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 183,
+      "angle": 90,
+      "locations": [30.5, 24]
+    },
+    {
+      "id": "MS5",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 275,
+      "angle": 180,
+      "locations": [-76.5, -0]
+    },
+    {
+      "id": "SM3",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": -135,
+      "locations": [-58.5, -32]
+    },
+    {
+      "id": "SM4",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": 135,
+      "locations": [-58.5, 32]
+    },
+    {
+      "id": "SM6",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-19.5, -37]
+    },
+    {
+      "id": "SM5",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-19.5, 37]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-137.5, -29],
+      "length": 49,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-137.5, 29],
+      "length": 49,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-138.5, -17],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-138.5, 17],
+      "length": 48,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -136.5, -33,
+    -116, -56,
+    -84.5, -66.5,
+    -37.5, -43,
+    -89.5, -98.5,
+    -73, -103.5,
+    -6, -48.5,
+    66, -48.5,
+    35.5, -86,
+    46, -89.5,
+    83, -50.5,
+    106.5, -50.5,
+    141.5, -23,
+    128.5, -7,
+    128.5, 7,
+    141.5, 23,
+    106.5, 50.5,
+    83, 50.5,
+    46, 89.5,
+    35.5, 86,
+    66, 48.5,
+    -6, 48.5,
+    -73, 103.5,
+    -89.5, 98.5,
+    -37.5, 43,
+    -84.5, 66.5,
+    -116, 56,
+    -136.5, 33
+  ]
+}
