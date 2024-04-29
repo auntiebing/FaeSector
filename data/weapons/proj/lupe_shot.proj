@@ -1,0 +1,18 @@
+{
+	"id":"lupe_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":20.0,
+	"hitGlowRadius":36,
+	"width":4.0,
+	"fadeTime":0.15,
+	"fringeColor":[40,205,175,235],
+	"coreColor":[90,220,195,220],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/small_ED.png",
+	"glowColor":[70,210,185,80],
+	"glowRadius":6.5,
+}

@@ -1,0 +1,88 @@
+{
+	"music":{
+		"music_campaign":[
+			{"file":"miscallenous_corvus_campaign_music.ogg","source":"sounds/music/music.bin","volume":1},
+		],
+	 "music_fae_market_neutral":[
+		 {
+			 "source":"sounds/music",
+			 "volume":1,
+			 "files":[
+				 "fae_willowandlight.ogg",
+			 ],
+			 "randomStart":false,
+		 },
+	 ],
+	 "music_fae_market_hostile":[
+		 {
+			 "source":"sounds/music",
+			 "volume":1,
+			 "files":[
+				 "fae_vanes.ogg",
+			 ],
+			 "randomStart":false,
+		 },
+	 ],
+	 "music_fae_encounter_neutral":[
+		 {
+			 "source":"sounds/music",
+			 "volume":1,
+			 "files":[
+				 "fae_shamanistic.ogg",
+			 ],
+			 "randomStart":false,
+		 },
+	 ],
+	 "music_fae_encounter_hostile":[
+		 {
+			 "source":"sounds/music",
+			 "volume":1,
+			 "files":[
+				 "fae_dragontoast.ogg",
+			 ],
+			 "randomStart":false,
+		 },
+	 ],
+ 	},
+
+	#Weapons#
+
+    "fae_blaster":[
+            {"file":"sounds/effects/fae_blaster_01.ogg","pitch":1,"volume":0.08},
+			{"file":"sounds/effects/fae_blaster_02.ogg","pitch":1,"volume":0.08},
+			{"file":"sounds/effects/fae_blaster_03.ogg","pitch":1,"volume":0.08},
+	],
+    "fae_light":[
+            {"file":"sounds/effects/fae_light_01.ogg","pitch":1,"volume":0.5}
+		],
+	"fae_tasuan":[
+			{"file":"sounds/effects/fae_tasuan_01.ogg","pitch":1.0,"volume":1.1},
+			{"file":"sounds/effects/fae_tasuan_02.ogg","pitch":1.0,"volume":1.1},
+			{"file":"sounds/effects/fae_tasuan_04.ogg","pitch":1.0,"volume":1.1},
+			{"file":"sounds/effects/fae_tasuan_05.ogg","pitch":1.0,"volume":1.1},
+			{"file":"sounds/effects/fae_tasuan_06.ogg","pitch":1.0,"volume":1.1}
+	],
+	"fae_rotary_fire":[
+		{"file":"sounds/effects/fae_rotary_fire.ogg","pitch":1,"volume":0.2}
+	],
+	"fae_spinup":[
+		{"file":"sounds/effects/fae_spinup.ogg","pitch":1,"volume":0.8}
+	],
+
+	#Ship Systems#
+
+	"istl_stutterwarp":[
+		{"file":"sounds/effects/istl_stutterwarp_01.ogg","pitch":0.985, "volume":0.99},
+		{"file":"sounds/effects/istl_stutterwarp_01.ogg","pitch":1, "volume":1.0},
+		{"file":"sounds/effects/istl_stutterwarp_01.ogg","pitch":1.015, "volume":0.99},
+		{"file":"sounds/effects/istl_stutterwarp_01.ogg","pitch":1.03, "volume":0.98}
+	],
+	"istl_system_unavailable":[
+		{"file":"sounds/effects/istl_system_unavailable01.ogg","pitch":0.985, "volume":0.19},
+		{"file":"sounds/effects/istl_system_unavailable01.ogg","pitch":1, "volume":0.2},
+		{"file":"sounds/effects/istl_system_unavailable01.ogg","pitch":1.015, "volume":0.19},
+		{"file":"sounds/effects/istl_system_unavailable02.ogg","pitch":0.985, "volume":0.19},
+		{"file":"sounds/effects/istl_system_unavailable02.ogg","pitch":1, "volume":0.2},
+		{"file":"sounds/effects/istl_system_unavailable02.ogg","pitch":1.015, "volume":0.19}
+	]
+}
