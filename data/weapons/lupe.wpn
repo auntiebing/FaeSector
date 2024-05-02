@@ -1,0 +1,64 @@
+{
+  "id": "lupe",
+  "specClass": "projectile",
+  "projectileSpecId": "lupe_shot",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "displayArcRadius": 650,
+  "turretSprite": "graphics/weapons/lupe_base.png",
+  "turretGunSprite": "graphics/weapons/lupe_barrel.png",
+  "hardpointSprite": "graphics/weapons/lupe_base.png",
+  "hardpointGunSprite": "graphics/weapons/lupe_barrel.png",
+  "specialWeaponGlowHeight": 40,
+  "specialWeaponGlowWidth": 15,
+  "visualRecoil": 5,
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "turretOffsets": [
+    11.5,
+    -3,
+    11.5,
+    0,
+    11.5,
+    3
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    18,
+    -3,
+    18,
+    0,
+    18,
+    3
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 1,
+    "particleSizeRange": 8,
+    "cloudParticleCount": 3,
+    "cloudDuration": 0.1,
+    "cloudRadius": 2,
+    "blowbackParticleCount": 0,
+    "blowbackDuration": 0,
+    "blowbackLength": 0,
+    "blowbackSpread": 0,
+    "particleColor": [
+      210,
+      90,
+      180,
+      200
+    ]
+  },
+  "fireSoundTwo": "fae_rotary_fire"
+}
