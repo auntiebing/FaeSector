@@ -1,0 +1,10 @@
+trail,projectile,sprite,minLength,fadeIn,duration,fadeOut,sizeIn,sizeOut,colorIn,colorOut,opacity,textLength,textScroll,distance,dispersion,drift,fadeOnFadeOut,angleAdjustment,additive,velocityIn,velocityOut,randomVelocity,angle,rotationIn,rotationOut,randomRotation,renderBelowExplosions
+fae_tasuan_shot,tasuan_shot,base_trail_smooth,20,0.1,0.25,1,16,32,"[255,225,100]","[255,24,24]",0.75,-512,0,25,0,1,FALSE,FALSE,TRUE,15,5,0,180,15,5,TRUE,TRUE
+fae_ulupe_shotA,ulupe_shot,base_trail_smooth,30,0.1,0.1,0.8,8,32,"[100,150,200]","[80,80,80]",0.4,128,-128,0,2,1,FALSE,FALSE,FALSE,0,0,0,0,0,0,FALSE,TRUE
+fae_ulupe_shotB,ulupe_shot,base_trail_mild,5,0,0.1,0.2,16,12,"[255,150,100]","[255,50,10]",0.6,128,-128,50,5,1,FALSE,FALSE,TRUE,0,0,0,0,0,0,FALSE,TRUE
+fae_lupe_shotA,lupe_shot,base_trail_smooth,5,0.05,0.05,0.30,8,2,"[100,200,200]","[0,50,100]",0.5,256,-1024,0,1,1,FALSE,FALSE,TRUE,20,0,1,180,360,10,TRUE,TRUE
+fae_lupe_shotB,lupe_shot,base_trail_smooth,5,0.1,0.05,0.25,8,2,"[75,150,200]","[0,40,100]",0.5,256,-1024,0,2,1,FALSE,FALSE,TRUE,25,0,0.75,180,360,10,TRUE,TRUE
+fae_lupe_shotC,lupe_shot,base_trail_smooth,5,0.15,0.05,0.20,8,2,"[50,100,200]","[0,30,100]",0.5,256,-1024,0,3,1,FALSE,FALSE,TRUE,30,0,0.5,180,360,10,TRUE,TRUE
+fae_lirim_shotA,lirim_plas,base_trail_contrail,20,0,0,0.2,5,50,"[200,100,125]","[50,10,30]",1,128,0,25,2,1,FALSE,FALSE,TRUE,0,0,0,180,0,0,FALSE,TRUE
+fae_lirim_shotB,lirim_plas,base_trail_smooth,10,0.05,0.1,0.75,15,5,"[200,100,125]","[50,0,200]",0.5,128,0,0,0,1,TRUE,FALSE,TRUE,100,0,0.2,180,0,90,TRUE,TRUE
+fae_lirim_shotC,lirim_plas,base_trail_smooth,20,0.05,0.1,0.75,10,30,"[200,75,200]","[0,50,200]",0.33,128,0,0,0,1,FALSE,FALSE,FALSE,0,0,0,180,0,0,TRUE,TRUE
