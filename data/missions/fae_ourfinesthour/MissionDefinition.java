@@ -1,4 +1,4 @@
-package bing.faesector.data.missions.fae_ourfinesthour;
+package data.missions.fae_ourfinesthour;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.FullName;

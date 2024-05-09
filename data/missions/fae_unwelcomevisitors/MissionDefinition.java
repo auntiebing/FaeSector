@@ -1,4 +1,4 @@
-package bing.faesector.data.missions.fae_unwelcomevisitors;
+package data.missions.fae_unwelcomevisitors;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.FullName;
