@@ -391,7 +391,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
 
         //add ocean planet
         PlanetAPI fae_ice = system.addPlanet( //assigns instance of newly created planet to variable planetOne
-                "fae_ocean", //unique id string
+                "fae_ice", //unique id string
                 star, //orbit focus for planet
                 "Estêle", //display name of planet
                 "frozen", //planet type id, comes from starsector-core/data/campaign/procgen/planet_gen_data.csv

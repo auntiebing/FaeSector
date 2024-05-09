@@ -83,7 +83,7 @@ public class fae_zelenthar extends BaseShipSystemScript {
             stats.getMaxTurnRate().unmodify(id);
 
             if (ship.getVelocity().lengthSquared() > Math.pow(ship.getMaxSpeed(),2)){
-                ship.getSystem().forceState(ShipSystemAPI.SystemState.OUT, 0);
+                //ship.getSystem().forceState(ShipSystemAPI.SystemState.OUT, 0);
                 ship.getVelocity().set(Vector2f.add(ship.getVelocity(),(Vector2f) new Vector2f(ship.getVelocity()).normalise().scale(-1 * ship.getMaxSpeed() * amount * 7), null));
             } else {
                 if (doOnce_EndExplosion){
