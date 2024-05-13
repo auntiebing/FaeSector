@@ -1,11 +1,28 @@
 {
-    "id":"faesector",
-	"name":"Faesector",
-	"author":"Bing",
-    "utility":"false",
-	"version":"0.0.1",
-	"description":"Donut Steel.",
-    "gameVersion": "0.97a-RC6",
-  	"jars":["jars/faesector.jar"],
-  	"modPlugin":"bing.faesector.fsModPlugin"
+  "id": "faesector",
+  "name": "Faesector",
+  "author": "Bing",
+  "utility": "false",
+  "version": "0.0.1",
+  "description": "Donut Steel.",
+  "gameVersion": "0.97a-RC6",
+  "jars": [
+    "jars/FaeSector.jar",
+    "libs/processing-penner-easing/easing/library/easing.jar"
+  ],
+  "modPlugin": "bing.faesector.fsModPlugin",
+  "dependencies": [
+    {
+      "id": "lw_lazylib",
+      "name": "LazyLib"
+    },
+    {
+      "id": "MagicLib",
+      "name": "MagicLib"
+    },
+    {
+      "id": "cmutils",
+      "name": "Combat Misc Utils"
+    }
+  ]
 }
