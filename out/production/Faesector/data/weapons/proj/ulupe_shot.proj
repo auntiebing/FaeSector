@@ -1,0 +1,18 @@
+{
+	"id":"ulupe_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":40.0,
+	"hitGlowRadius":48,
+	"width":8.0,
+	"fadeTime":0.175,
+	"fringeColor":[50,255,175,155],
+	"coreColor":[50,255,205,180],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/medium_ED.png",
+	"glowColor":[50,255,165,50],
+	"glowRadius":10,
+}
