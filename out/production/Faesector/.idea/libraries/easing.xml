@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="easing">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/processing-penner-easing/easing/library/easing.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -8,8 +8,12 @@ import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import org.lwjgl.util.vector.Vector2f;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.EnumSet;
+import java.util.List;
 
+import static bing.faesector.data.render.at_RendererHelper.drawTestSquare;
 import static bing.faesector.data.render.at_RendererHelper.worldVectorToScreenVector;
 import static org.lwjgl.opengl.GL11.*;
 
@@ -27,23 +31,27 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
         this.angle = angle;
         this.OvalX = OvalX;
         this.OvalY = OvalY;
+        backgroundOfRift.setAlphaMult(500f);
     }
 
     public void render(CombatEngineLayers layer, ViewportAPI viewport) {
         CMUKitUI.openGLForMisc(); // gl open
 
-        glEnable(GL_BLEND);//for transparency
-        glEnable(GL_TEXTURE_2D);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//https://www.codeproject.com/Questions/512386/TransparentplustextureplusinplusOpenGL
+//        drawTestSquare(sourceLocation, viewport, backgroundOfRift);
+
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         backgroundOfRift.bindTexture();
+        glEnable(GL_BLEND);//for transparency
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//https://www.codeproject.com/Questions/512386/TransparentplustextureplusinplusOpenGL
+        glEnable(GL_TEXTURE_2D);
         glBegin(GL_TRIANGLE_FAN);
+        glColor4f(backgroundOfRift.getColor().getRed() / 255f, backgroundOfRift.getColor().getGreen() / 255f, backgroundOfRift.getColor().getBlue() / 255f, backgroundOfRift.getColor().getAlpha() / 255f);
 
         Vector2f locF = worldVectorToScreenVector(sourceLocation, viewport);
         glTexCoord2f(locF.x / 1024f, locF.y / 1024f);
         glVertex2f(locF.x, locF.y);
 
-        for (int i = -91; i < 270; i++) {
-
+        for (int i = -91; i < 270; i += 10) {
 
             float rad = i * (3.1415f / 180f);
             float xLoc = (float) (Math.cos(rad) * OvalX);
@@ -51,12 +59,9 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
             Vector2f loc = new Vector2f(xLoc + sourceLocation.x, yLoc + sourceLocation.y);
 
             loc = worldVectorToScreenVector(loc, viewport);
-//            loc = at_RendererHelper.screenVectorToWorldVector(loc, viewport);
-
 
             glTexCoord2f(loc.x / 1024f, loc.y / 1024f);
             glVertex2f(loc.x, loc.y);
-
 
         }
 
@@ -64,7 +69,6 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
         glDisable(GL_TEXTURE_2D);
         glDisable(GL_BLEND);
 
-//        drawTestSquare(sourceLocation, viewport, backgroundOfRift);
 
         CMUKitUI.closeGLForMisc(); // gl close
     }

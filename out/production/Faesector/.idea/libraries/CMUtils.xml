@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="CMUtils">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../CMUtils/jars/CMUtils.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

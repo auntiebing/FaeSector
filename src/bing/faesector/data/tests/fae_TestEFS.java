@@ -39,7 +39,7 @@ public class fae_TestEFS extends BaseEveryFrameCombatPlugin {
 
                 Vector2f center = Global.getCombatEngine().getPlayerShip().getMouseTarget();
 
-//                at_CombatRiftRenderer DiamondRift = new at_CombatRiftRenderer(
+//                fae_CombatRiftRenderer DiamondRift = new fae_CombatRiftRenderer(
 //                        new Vector2f(center),
 //                        VectorUtils.getAngle(Global.getCombatEngine().getPlayerShip().getMouseTarget(), Global.getCombatEngine().getPlayerShip().getLocation())
 //                );
