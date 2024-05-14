@@ -1,7 +1,7 @@
 package bing.faesector.data.tests;
 
 import bing.faesector.data.render.renderClassesFolder.SquareData;
-import bing.faesector.data.render.renderClassesFolder.RenderMode;
+import bing.faesector.data.render.renderClassesFolder.SquareMode;
 import cmu.gui.CMUKitUI;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
@@ -19,8 +19,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
-import static bing.faesector.data.render.RenderMisc.*;
-import static bing.faesector.data.render.renderFunctions.SquareRenderer.DrawSquare;
+import static bing.faesector.data.render.at_RenderPluginFunctions.DrawSquare;
+import static bing.faesector.data.render.at_RendererHelper.worldVectorToScreenVector;
 
 
 public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
@@ -75,11 +75,6 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
         float sizeMultX = Sine.easeOut(time, beginning, change, duration) / duration;
         float sizeMultY = Circ.easeInOut(time, beginning, change, duration) / duration;
 
-        if (time < duration) {
-            if (Global.getCombatEngine().isPaused()) time--;
-            time++;
-        }
-
         float frontLenght = 900f;
         float leftLenght = 150f;
         float rightLenght = 150f;
@@ -119,7 +114,10 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
         Vector2f backRiftMarginWidth = MathUtils.getPointOnCircumference(sourceLocation, (bottomLenght + riftMarginWidth) * sizeMultX, angle - 180);
         //endregion
 
-
+        if (time < duration) {
+            if (Global.getCombatEngine().isPaused()) time--;
+            time++;
+        }
 
         //region colors
         List<Color> edgeColors = new ArrayList<>(Arrays.asList(
@@ -164,7 +162,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                 riftTextureLocation,
                 null,
                 backgroundOfRift,
-                RenderMode.SCALE,
+                SquareMode.SCALE,
                 new Vector2f(0, 0),
                 new Vector2f(256, 256)
         );
@@ -198,7 +196,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         null,
                         animatedTexture,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(xOffSet, yOffSet),
                         AnimatedBorderTextureSizeInGame
                 )
@@ -218,7 +216,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         null,
                         animatedTexture,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(xOffSet, yOffSet),
                         AnimatedBorderTextureSizeInGame
                 )
@@ -238,7 +236,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         null,
                         animatedTexture,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(xOffSet, yOffSet),
                         AnimatedBorderTextureSizeInGame
                 )
@@ -258,7 +256,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         null,
                         animatedTexture,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(xOffSet, yOffSet),
                         AnimatedBorderTextureSizeInGame
                 )
@@ -299,7 +297,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         new Color(56, 30, 217, 255),
                         borderGradient,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(0, 0),
                         new Vector2f(0, 0)
                 )
@@ -319,7 +317,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         new Color(56, 30, 217, 255),
                         borderGradient,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(0, 0),
                         new Vector2f(0, 0)
                 )
@@ -339,7 +337,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         new Color(56, 30, 217, 255),
                         borderGradient,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(0, 0),
                         new Vector2f(0, 0)
                 )
@@ -359,7 +357,7 @@ public class fae_CombatRiftRenderer extends BaseCombatLayeredRenderingPlugin {
                         ), viewport),
                         new Color(56, 30, 217, 255),
                         borderGradient,
-                        RenderMode.TILE,
+                        SquareMode.TILE,
                         new Vector2f(0, 0),
                         new Vector2f(0, 0)
                 )

@@ -1,6 +1,5 @@
 package bing.faesector.data.helpers;
 
-
 import bing.faesector.data.helpers.classes.fae_DamageBaseClass;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
