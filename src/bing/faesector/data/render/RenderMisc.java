@@ -1,7 +1,7 @@
 package bing.faesector.data.render;
 
 import bing.faesector.data.render.renderClassesFolder.SquareData;
-import bing.faesector.data.render.renderClassesFolder.SquareMode;
+import bing.faesector.data.render.renderClassesFolder.RenderMode;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import org.lazywizard.lazylib.MathUtils;
@@ -13,9 +13,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static bing.faesector.data.render.at_RenderPluginFunctions.DrawSquare;
+import static bing.faesector.data.render.renderFunctions.SquareRenderer.DrawSquare;
+import static org.lwjgl.opengl.GL11.glColor4f;
 
-public class at_RendererHelper {
+public class RenderMisc {
 
     public static Vector2f worldVectorToScreenVector(Vector2f worldVector, ViewportAPI viewport) {
         return new Vector2f(viewport.convertWorldXtoScreenX(worldVector.x), viewport.convertWorldYtoScreenY(worldVector.y));//screen vector
@@ -58,7 +59,7 @@ public class at_RendererHelper {
                         ),
                         Color.red,
                         texture,
-                        SquareMode.SCALE,
+                        RenderMode.SCALE,
                         new Vector2f(0, 0),
                         new Vector2f(0, 0)
                 ),
@@ -119,6 +120,10 @@ public class at_RendererHelper {
         list.add(rightBottom);
 
         return list;
+    }
+
+    public static void SetColor(Color color) {
+        glColor4f(color.getRed() / 255f, color.getGreen() / 255f, color.getBlue() / 255f, color.getAlpha() / 255f);
     }
 
 }
