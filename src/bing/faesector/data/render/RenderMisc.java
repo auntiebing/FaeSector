@@ -13,7 +13,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static bing.faesector.data.render.at_RenderPluginFunctions.DrawSquare;
+import static bing.faesector.data.render.renderFunctions.SquareRenderer.DrawSquare;
+import static org.lwjgl.opengl.GL11.glColor4f;
 
 public class RenderMisc {
 
@@ -119,6 +120,10 @@ public class RenderMisc {
         list.add(rightBottom);
 
         return list;
+    }
+
+    public static void SetColor(Color color) {
+        glColor4f(color.getRed() / 255f, color.getGreen() / 255f, color.getBlue() / 255f, color.getAlpha() / 255f);
     }
 
 }
