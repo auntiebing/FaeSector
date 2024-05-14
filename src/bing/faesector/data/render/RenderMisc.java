@@ -15,7 +15,7 @@ import java.util.List;
 
 import static bing.faesector.data.render.at_RenderPluginFunctions.DrawSquare;
 
-public class at_RendererHelper {
+public class RenderMisc {
 
     public static Vector2f worldVectorToScreenVector(Vector2f worldVector, ViewportAPI viewport) {
         return new Vector2f(viewport.convertWorldXtoScreenX(worldVector.x), viewport.convertWorldYtoScreenY(worldVector.y));//screen vector
