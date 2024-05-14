@@ -1,8 +1,5 @@
 package bing.faesector.data.tests;
 
-import bing.faesector.data.Statics;
-import bing.faesector.data.helpers.PerlinNoise;
-import bing.faesector.data.render.RenderMisc;
 import cmu.gui.CMUKitUI;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
@@ -10,16 +7,15 @@ import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import org.lwjgl.util.vector.Vector2f;
-import penner.easing.Circ;
-import penner.easing.Sine;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
+import static bing.faesector.data.render.at_RendererHelper.drawTestSquare;
+import static bing.faesector.data.render.at_RendererHelper.worldVectorToScreenVector;
 import static org.lwjgl.opengl.GL11.*;
-import static bing.faesector.data.render.RenderMisc.*;
 
 public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
 
@@ -29,11 +25,6 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
     private float OvalX;
     private float OvalY;
     private CombatEngineLayers CURRENT_LAYER = CombatEngineLayers.ABOVE_PLANETS;
-    private PerlinNoise noise = new PerlinNoise(Statics.random.nextInt(Integer.MAX_VALUE));
-    private int time = 0;
-    private float beginning = 0;
-    private float change = 200;
-    private float duration = 200;
 
     public fae_OvalRiftRenderer(Vector2f sourceLocation, float angle, float OvalX, float OvalY) {
         this.sourceLocation = sourceLocation;
@@ -46,14 +37,6 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
     public void render(CombatEngineLayers layer, ViewportAPI viewport) {
         CMUKitUI.openGLForMisc(); // gl open
 
-        float sizeMultX = Sine.easeOut(time, beginning, change, duration) / duration;
-        float sizeMultY = Circ.easeInOut(time, beginning, change, duration) / duration;
-
-        if (time < duration) {
-            if (Global.getCombatEngine().isPaused()) time--;
-            time++;
-        }
-
 //        drawTestSquare(sourceLocation, viewport, backgroundOfRift);
 
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -62,27 +45,22 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//https://www.codeproject.com/Questions/512386/TransparentplustextureplusinplusOpenGL
         glEnable(GL_TEXTURE_2D);
         glBegin(GL_TRIANGLE_FAN);
-        RenderMisc.SetColor(backgroundOfRift.getColor());
+        glColor4f(backgroundOfRift.getColor().getRed() / 255f, backgroundOfRift.getColor().getGreen() / 255f, backgroundOfRift.getColor().getBlue() / 255f, backgroundOfRift.getColor().getAlpha() / 255f);
 
         Vector2f locF = worldVectorToScreenVector(sourceLocation, viewport);
-        glTexCoord2f(0.5f, 0.5f);
+        glTexCoord2f(locF.x / 1024f, locF.y / 1024f);
         glVertex2f(locF.x, locF.y);
 
-        for (int i = -91; i < 290; i += 1) {
+        for (int i = -91; i < 270; i += 10) {
 
             float rad = i * (3.1415f / 180f);
-
-            float xLocF = (float) (Math.cos(rad + noise.noise2(i + Statics.t, i + Statics.t)));
-            float yLocF = (float) (Math.sin(rad));
-
-            float xLoc = (float) ((xLocF * OvalX) * sizeMultX);
-            float yLoc = (float) ((yLocF * OvalY) * sizeMultY);
-
+            float xLoc = (float) (Math.cos(rad) * OvalX);
+            float yLoc = (float) (Math.sin(rad) * OvalY);
             Vector2f loc = new Vector2f(xLoc + sourceLocation.x, yLoc + sourceLocation.y);
 
             loc = worldVectorToScreenVector(loc, viewport);
 
-            glTexCoord2f(xLocF / 2 + 0.5f, yLocF / 2 + 0.5f);
+            glTexCoord2f(loc.x / 1024f, loc.y / 1024f);
             glVertex2f(loc.x, loc.y);
 
         }

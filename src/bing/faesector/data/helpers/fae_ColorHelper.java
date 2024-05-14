@@ -1,7 +1,5 @@
 package bing.faesector.data.helpers;
 
-import bing.faesector.data.Statics;
-
 import java.awt.*;
 
 public class fae_ColorHelper {
@@ -35,12 +33,12 @@ public class fae_ColorHelper {
 
     public static Color randomColor(boolean isAlpha) {
         if (isAlpha)
-            return new Color(Statics.random.nextInt(255), Statics.random.nextInt(255), Statics.random.nextInt(255), Statics.random.nextInt(255));
-        return new Color(Statics.random.nextInt(255), Statics.random.nextInt(255), Statics.random.nextInt(255));
+            return new Color(fae_Statics.random.nextInt(255), fae_Statics.random.nextInt(255), fae_Statics.random.nextInt(255), fae_Statics.random.nextInt(255));
+        return new Color(fae_Statics.random.nextInt(255), fae_Statics.random.nextInt(255), fae_Statics.random.nextInt(255));
     }
 
     public static Color randomiseAlpha(Color color) {
-        return new Color(color.getRed(), color.getGreen(), color.getBlue(), Statics.random.nextInt(255));
+        return new Color(color.getRed(), color.getGreen(), color.getBlue(), fae_Statics.random.nextInt(255));
     }
 
 }
