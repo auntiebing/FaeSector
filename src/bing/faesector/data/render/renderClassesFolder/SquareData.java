@@ -45,7 +45,7 @@ public class SquareData {
             Vector2f rightBottom,
             Color color,
             SpriteAPI texture,
-            SquareMode textureMode,
+            RenderMode textureMode,
             Vector2f textureOffSet,
             Vector2f textureSizeInGame
     ) {
@@ -67,7 +67,7 @@ public class SquareData {
             List<Vector2f> list,
             Color color,
             SpriteAPI texture,
-            SquareMode textureMode,
+            RenderMode textureMode,
             Vector2f textureOffSet,
             Vector2f textureSizeInGame
     ) {
@@ -108,7 +108,7 @@ public class SquareData {
     public Color color = Color.red;
     public List<Color> vertexColors = null;
     public SpriteAPI texture;
-    private SquareMode mode = SquareMode.SCALE;
+    private RenderMode mode = RenderMode.SCALE;
     public Vector2f textureOffSet;
     public Vector2f textureSizeInGame;
 
@@ -118,11 +118,11 @@ public class SquareData {
     public Vector2f textRightBottom;
     public Vector2f textCoordMult = new Vector2f(1f, 1f);
 
-    public SquareMode getMode() {
+    public RenderMode getMode() {
         return mode;
     }
 
-    public void setMode(SquareMode mode) {
+    public void setMode(RenderMode mode) {
         this.mode = mode;
     }
 }

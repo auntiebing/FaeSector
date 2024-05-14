@@ -8,13 +8,10 @@ import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.EnumSet;
-import java.util.List;
 
-import static bing.faesector.data.render.at_RendererHelper.drawTestSquare;
-import static bing.faesector.data.render.at_RendererHelper.worldVectorToScreenVector;
+import static bing.faesector.data.render.RenderMisc.drawTestSquare;
+import static bing.faesector.data.render.RenderMisc.worldVectorToScreenVector;
 import static org.lwjgl.opengl.GL11.*;
 
 public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {

@@ -1,7 +1,7 @@
 package bing.faesector.data.render;
 
 import bing.faesector.data.render.renderClassesFolder.SquareData;
-import bing.faesector.data.render.renderClassesFolder.SquareMode;
+import bing.faesector.data.render.renderClassesFolder.RenderMode;
 import cmu.gui.CMUKitUI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
@@ -59,7 +59,7 @@ public class at_RenderPluginFunctions {
 
 
             DrawSquare(
-                    new SquareData(at_RendererHelper.LineToCorners(from, to, lineWidth),
+                    new SquareData(RenderMisc.LineToCorners(from, to, lineWidth),
                             lineColor,
                             null,
                             null,
@@ -167,7 +167,7 @@ public class at_RenderPluginFunctions {
         Vector2f leftBottom = square.leftBottom;
         Vector2f rightBottom = square.rightBottom;
         Vector2f textureOffSet = square.textureOffSet;
-        if (square.getMode() == SquareMode.SCALE) {
+        if (square.getMode() == RenderMode.SCALE) {
 
             if (vertexColorsBool)
                 glColor4f(vertexColors.get(0).getRed() / 255f, vertexColors.get(0).getGreen() / 255f, vertexColors.get(0).getBlue() / 255f, vertexColors.get(0).getAlpha() / 255f);
@@ -193,7 +193,7 @@ public class at_RenderPluginFunctions {
                 glTexCoord2f(square.textRightBottom.x * square.textCoordMult.x + textureOffSet.x, square.textRightBottom.y * square.textCoordMult.y + textureOffSet.y);
             glVertex2f(rightBottom.x, rightBottom.y);
 
-        } else if (square.getMode() == SquareMode.TILE) {
+        } else if (square.getMode() == RenderMode.TILE) {
 
             float leftTopY = viewport.convertScreenYToWorldY(leftTop.y);
             float leftBottomY = viewport.convertScreenYToWorldY(leftBottom.y);
