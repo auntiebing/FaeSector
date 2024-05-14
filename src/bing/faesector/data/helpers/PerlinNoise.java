@@ -4,7 +4,7 @@ import org.lwjgl.util.vector.Vector2f;
 
 import java.util.Random;
 
-public class PerlinNoise {
+public class PerlinNoise {//https://gist.github.com/nbadal/5538346
     final static int TABLE_SIZE = 64;
 
     private final static double WEIGHT(double T) {
