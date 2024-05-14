@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package bing.faesector.data.helpers;
 
 import org.lwjgl.util.vector.Vector2f;
@@ -153,7 +152,4 @@ public class PerlinNoise {//https://gist.github.com/nbadal/5538346
 
         return (sum + offset) * factor;
     }
-=======
-package bing.faesector.data.helpers;public class PerlinNoise {
->>>>>>> parent of 2c7f9d8 (we are so back)
 }
