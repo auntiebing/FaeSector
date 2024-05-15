@@ -199,14 +199,14 @@ public class fae_zelenthar extends BaseShipSystemScript {
             currRange +=  waveSpeed * amount;
             timer.advance(amount);
             if (timer.intervalElapsed()) {
-                for (CombatEntityAPI enemy : AIUtils.getNearbyEnemies(ship, currRange)) {
-                    if (alreadyHit.contains(enemy)) continue;
-                    Vector2f arcLoc = Vector2f.add(point, (Vector2f) Vector2f.sub(enemy.getLocation(), point, null).normalise(null).scale(currRange), null);
+                for (CombatEntityAPI target : AIUtils.getNearbyEnemies(ship, currRange)) {
+                    if (alreadyHit.contains(target)) continue;
+                    Vector2f arcLoc = Vector2f.add(point, (Vector2f) Vector2f.sub(target.getLocation(), point, null).normalise(null).scale(currRange), null);
                     for (int i = 0; i < 5; i++) {
                         EmpArcEntityAPI arc = Global.getCombatEngine().spawnEmpArc(ship,
                                 arcLoc,
                                 null,
-                                enemy,
+                                target,
                                 DamageType.ENERGY,
                                 100,
                                 500,
@@ -217,7 +217,19 @@ public class fae_zelenthar extends BaseShipSystemScript {
                                 new Color(35, 96, 204,255));
                         arc.setSingleFlickerMode();
                     }
-                    alreadyHit.add(enemy);
+                    alreadyHit.add(target);
+                }
+                for (CombatEntityAPI target : AIUtils.getNearbyEnemies(ship, currRange)) {
+                    if (target instanceof MissileAPI && !alreadyHit.contains(target)) {
+                        MissileAPI missile = (MissileAPI) target;
+                        if (!missile.isFizzling() && !missile.isFading() && !missile.isExpired()) {
+                            Global.getCombatEngine().applyDamage(missile, point, 10f, DamageType.ENERGY, 0f, false, false, ship);
+                            Global.getCombatEngine().spawnEmpArc(ship, point, null, missile, DamageType.ENERGY, 100, 500, 999999, null, 10,
+                                    new Color(0, 202, 238, 255), new Color(35, 96, 204, 255));
+                            alreadyHit.add(missile);
+
+                        }
+                    }
                 }
                 int numArcs = Math.round(currRange / 10);
                 if (numArcs >= 10) {

@@ -2,6 +2,7 @@ package bing.faesector.data.weapons;
 
 import com.fs.starfarer.api.combat.*;
 import bing.faesector.data.magic.fae_dust_trail;
+import bing.faesector.data.weapons.fae_calathAI;
 
 import java.awt.*;
 import java.util.Arrays;
