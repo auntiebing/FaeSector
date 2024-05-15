@@ -15,9 +15,9 @@
 	"clampTurnRateAfter":false,
 	"clampMaxSpeedAfter":false,
 
-	"useSound":"system_maneuvering_jets",
-	"loopSound":"system_maneuvering_jets_loop",
-	"outOfUsesSound":"engine_disabled",
+	"useSound":"fae_zelenthar_start",
+	"loopSound":"fae_zelenthar_loop",
+	"outOfUsesSound":"fae_zelenthar_end",
 	
 	"aiHints":{
 		"activeSpeedIncrease":250,

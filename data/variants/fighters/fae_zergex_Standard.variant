@@ -1,9 +1,9 @@
 {
-  "variantId": "fae_virgix_Standard",
-  "hullId": "fae_virgix",
-  "displayName": "Interceptor",
+  "variantId": "fae_zergex_Standard",
+  "hullId": "fae_zergex",
+  "displayName": "Corvette",
   "goalVariant": true,
-  "fluxCapacitors": 1,
+  "fluxCapacitors": 0,
   "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
@@ -13,8 +13,11 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS1": "mequas",
-        "WS2": "mequas"
+        "HP1": "mequas",
+        "HP2": "mequas",
+        "HP3": "mequas",
+        "HP4": "mequas",
+        "WS1": "balphus"
       }
     }
   ],

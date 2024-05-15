@@ -6,20 +6,20 @@
     "gridUIColor":[200,0,125,75],
     "brightUIColor":[231,98,206,255],
 
-    "displayName":"Fairies",
+    "displayName":"Xielian Monarchy",
     "logo":"graphics/factions/sindrian_diktat.png",
     "crest":"graphics/factions/crest_sindrian_diktat.png",
-    "displayNameWithArticle":"the Sindrian Diktat",
-    "shipNamePrefix":"SDS",
+    "displayNameWithArticle":"the Xeilian Monarchy",
+    "shipNamePrefix":"XRS",
     "shipNameSources":{
-        "DIKTAT":2,
-        "BRITISH_NAVY":1,
-        "ROMAN":1,
-        "GREEK":1,
-        "EGYPTIAN":1,
-        "PERSIAN":1,
-        "SPACE":1,
-        "GENERAL":1,
+        "DIKTAT":0,
+        "BRITISH_NAVY":0,
+        "ROMAN":4,
+        "GREEK":2,
+        "EGYPTIAN":0,
+        "PERSIAN":0,
+        "SPACE":0,
+        "GENERAL":0,
     },
     "names":{
         "old english":1,
@@ -29,13 +29,16 @@
     },
     # variantOverrides restricts hulls to listed variants and adjusts their probability
     "variantOverrides":{
-        "executor_Standard":10,
+        "faesector_lupine_Brute":10,
     },
     # multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
         "tags":{
         },
         "hulls":{
+			"sunder":0.5,
+			"falcon":0.5,
+			"monitor":0.5,
         },
     },
     # ships the faction gets access to when importing S&W out-of-faction
@@ -47,52 +50,64 @@
     "knownShips":{
         "tags":["sindrian_diktat"],
         "hulls":[
-            "crig",
-            "ox",
-            "dram",
-            "phaeton",
-            "prometheus",
-            "gemini",
-            "atlas",
-            "mercury",
-            "hermes",
-            "kite_original",
-            "mudskipper",
-            "wayfarer",
-            "nebula",
-            "valkyrie",
-            "starliner",
-            "buffalo",
-            "colossus",
-
-            "brawler",
-            "centurion",
-
-            "hammerhead",
-            "sunder",
-
-            "falcon",
-            "eagle",
-
-            "executor",
-			"faesector_lupine",
+			"crig",
+			"ox",
+			"dram",
+			"phaeton",
+			"prometheus",
+			"gemini",
+			"atlas",
+			"mercury",
+			"hermes",
+			"kite_original",
+			"mudskipper",
+			"wayfarer",
+			"nebula",
+			"valkyrie",
+			"starliner",
+			"buffalo",
+			"colossus",
+			
+			"vigilance",
+			"brawler",
+			"monitor",
+			
+			"hammerhead",
+			"sunder",
+			"drover",
+			
+			"heron",
+			"falcon",
+			"eagle",
+			"champion",
+			"gryphon",
+			
+			"conquest",
+			"pegasus",
+			"faesector_lupine"
         ],
     },
     # listing ships here will make the faction mostly use them even if other hulls become available
     "priorityShips":{
         "tags":[],
         "hulls":[
+			"faesector_lupine",
         ],
     },
     "knownFighters":{
-        "tags":["sindrian_diktat"],
+        "tags":["persean"],
         "fighters":[
-            "talon_wing",
+			"thunder_wing",
+			"gladius_wing",
+			"talon_wing",
+			"claw_wing",
+			"fae_virgix_wing"
         ],
     },
     "priorityFighters":{
         "tags":[],
         "fighters":[
+			"fae_virgix_wing"
         ],
     },
     "knownWeapons":{
@@ -149,6 +164,13 @@
 
             "hil",
             "autopulse",
+			"tasuan",
+			"ulupe",
+			"lupe",
+			"lirim",
+			"calath",
+			"fae_Z_threat",
+			"balphus",
         ],
     },
     "priorityWeapons":{
@@ -157,7 +179,7 @@
         ],
     },
     "knownHullMods":{
-        "tags":["standard", "sindrian_diktat"],
+        "tags":["standard", "persean"],
         "hullMods":[
         ],
     },
@@ -196,34 +218,40 @@
     },
     "factionDoctrine":{
         "warships":5,
-        "carriers":0,		# "the individualism often displayed by the so-called "fighter jocks" detracts from all working together to fulfill the Supreme Executor's Great Plan"
+        "carriers":1,
         "phaseShips":0,
 
-        "officerQuality":1,
+        "officerQuality":2,
         "shipQuality":3,
-        "numShips":3,
+        "numShips":2,
 
-        "shipSize":4,
+        "shipSize":3,
 
         "aggression":4,
 
-        "combatFreighterProbability":0,      				# instead of some portion of the freighters in a fleet
+        "combatFreighterProbability":0.5,      				# instead of some portion of the freighters in a fleet
         "combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
-        "combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
-        "autofitRandomizeProbability":0,					# there is no room for chance in the Supreme Executor's Great Plan
+        "combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+        "autofitRandomizeProbability":0,					# there is no room for chance in the Queen's Grand Plan
 
-        "commanderSkillsShuffleProbability":0,
+		        "officerSkillsShuffleProbability":1f,
+        "officerSkills":[
+            "ballistic_mastery",
+            "energy_weapon_mastery",
+            "ordnance_expert",
+        ],
+        "commanderSkillsShuffleProbability":1,
         "commanderSkills":[
             "coordinated_maneuvers",
             "crew_training",
-            "tactical_drills",
+			"officer_training",
+			"electronic_warfare",
         ],
     },
     "illegalCommodities":[
         "drugs",
         "organs",
         "hand_weapons",
-        "ai_cores",
     ],
     "music":{
         "theme":"music_diktat_market_neutral",
@@ -277,9 +305,10 @@
     "custom":{
         "offersCommissions":true,
         "engagesInHostilities":true,
+		"engageWhenEvenStrength":true,
         "buysAICores":true,
-        "AICoreValueMult":2,
-        "AICoreRepMult":1,
+        "AICoreValueMult":1,
+        "AICoreRepMult":2,
         "buysSurveyData":true,
         "hostilityImpactOnGrowth":true,
         #"makesPirateBases":true, # testing
@@ -292,17 +321,21 @@
     },
     "ranks":{
         "ranks":{
-            "factionLeader":{"name":"Supreme Executor"},
+            "factionLeader":{"name":"Queen"},
+			"spaceAdmiral":{"name":"High Admiral"},
+			"spaceCommander":{"name":"General"},
         },
         "posts":{
-            "factionLeader":{"name":"Supreme Executor"},
-            "guardLeader":{"name":"Leader of Executive Guard"},
-            "militaryAdministrator":{"name":"Controller-General"},
+            "factionLeader":{"name":"Queen"},
+			"patrolCommander":{"name":"Patrol Commander"},
+			"fleetCommander":{"name":"Fleet Commander"},
+			"baseCommander":{"name":"Base Commander"},
         },
     },
     "fleetTypeNames":{
         "trade":"Mercantile Convoy",
         "tradeLiner":"Liner Convoy",
+		"tradeSmuggler":"Smuggler",
         "smallTrader":"Trader",
 
         "patrolSmall":"Fast Picket",

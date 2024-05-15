@@ -1,0 +1,111 @@
+{
+  "hullName": "Zergex",
+  "hullId": "fae_zergex",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/fae_zergex.png",
+  "style": "MIDLINE",
+  "height": 62,
+  "width": 36,
+  "center": [18, 31],
+  "collisionRadius": 45.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 36.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS1",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [2, 0]
+    },
+    {
+      "id": "HP1",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [22.5, -8.5]
+    },
+    {
+      "id": "HP4",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [22.5, 8.5]
+    },
+    {
+      "id": "HP2",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [29.5, -2.5]
+    },
+    {
+      "id": "HP3",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [29.5, 2.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-24, -5.5],
+      "length": 18,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-24, 5.5],
+      "length": 18,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -30, 2,
+    -24, 4,
+    -24, 7,
+    -23, 8,
+    -18, 8,
+    -17.5, 10.5,
+    -8, 10.5,
+    -11, 13,
+    -11, 14,
+    -9, 17,
+    -4, 17,
+    8.5, 11.5,
+    23, 10,
+    23, 5,
+    30, 4,
+    30, -4,
+    23, -5,
+    23, -10,
+    8.5, -11.5,
+    -4, -17,
+    -9, -17,
+    -11, -14,
+    -11, -13,
+    -8, -10.5,
+    -17.5, -10.5,
+    -18, -8,
+    -23, -8,
+    -24, -7,
+    -24, -4,
+    -30, -2
+  ]
+}
