@@ -33,25 +33,25 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// Set a blurb for each fleet
 		api.setFleetTagline(FleetSide.PLAYER, "Inran Testing Fleet. Just a bunch of Lupines.");
 		api.setFleetTagline(FleetSide.ENEMY, "One poor, poor Onslaught.");
-		
+
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
 		api.addBriefingItem("Brother is not about to have a good time.");
 		api.addBriefingItem("Don't lose the flagship.");
 		//api.addBriefingItem("Maintain tactical awareness and use superior mobility to choose your battles.");
 		//api.addBriefingItem("Remember: If you engage the enemy flagship in a fair fight, you will lose.");
-		
+
 		// Set up the player's fleet
 		// Set up the player's fleet
 		api.getDefaultCommander(FleetSide.PLAYER).getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 1);
-		FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Holdma", true);
+		FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Holdma", true);
 		PersonAPI officer = OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 4, FleetFactoryV3.getSkillPrefForShip(member), true, null, true, false, 0, new Random());
 		member.setCaptain(officer);
-		FleetMemberAPI member2 = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Sugma", false);
+		FleetMemberAPI member2 = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Sugma", false);
 		member2.setCaptain(OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 1, FleetFactoryV3.getSkillPrefForShip(member2), true, null, true, false, 0, new Random()));
-		FleetMemberAPI member3 = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Ligma", false);
+		FleetMemberAPI member3 = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Ligma", false);
 		member3.setCaptain(OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 1, FleetFactoryV3.getSkillPrefForShip(member3), true, null, true, false, 0, new Random()));
-		FleetMemberAPI member4 = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Grabma", false);
+		FleetMemberAPI member4 = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Grabma", false);
 		member4.setCaptain(OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 1, FleetFactoryV3.getSkillPrefForShip(member4), true, null, true, false, 0, new Random()));
 
 		// Mark player flagship as essential
@@ -97,18 +97,17 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		//api.addToFleet(FleetSide.ENEMY, "lasher_CS", FleetMemberType.SHIP, false);
 
 
-
 		// Set up the map.
 		float width = 24000f;
 		float height = 18000f;
-		api.initMap((float)-width/2f, (float)width/2f, (float)-height/2f, (float)height/2f);
+		api.initMap((float) -width / 2f, (float) width / 2f, (float) -height / 2f, (float) height / 2f);
 
-		float minX = -width/2;
-		float minY = -height/2;
+		float minX = -width / 2;
+		float minY = -height / 2;
 
 		for (int i = 0; i < 15; i++) {
-			float x = (float) Math.random() * width - width/2;
-			float y = (float) Math.random() * height - height/2;
+			float x = (float) Math.random() * width - width / 2;
+			float y = (float) Math.random() * height - height / 2;
 			float radius = 100f + (float) Math.random() * 900f;
 			api.addNebula(x, y, radius);
 		}
@@ -134,6 +133,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.addPlugin(new BaseEveryFrameCombatPlugin() {
 			public void init(CombatEngineAPI engine) {
 			}
+
 			public void advance(float amount, List events) {
 				if (Global.getCombatEngine().isPaused()) {
 					return;
@@ -143,20 +143,24 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 						if (ship.getCaptain() != null && ship.getOwner() == 0 && ship.getCaptain().getStats().getSkillsCopy().size() > 4) {
 							String text = "";
 							for (int u = 4; u < ship.getCaptain().getStats().getSkillsCopy().size(); u++) {
-								if (u < ship.getCaptain().getStats().getSkillsCopy().size()-1) {text = text+(((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getLevel() > 1 ?  ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName()+"+, " :  ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName()+", ");} else {text = text+(((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getLevel() > 1 ? ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName()+"+." :  ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName()+".");}
+								if (u < ship.getCaptain().getStats().getSkillsCopy().size() - 1) {
+									text = text + (((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getLevel() > 1 ? ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName() + "+, " : ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName() + ", ");
+								} else {
+									text = text + (((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getLevel() > 1 ? ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName() + "+." : ((MutableCharacterStatsAPI.SkillLevelAPI) ship.getCaptain().getStats().getSkillsCopy().get(u)).getSkill().getName() + ".");
+								}
 							}
 							if (ship.getFleetMember() != null) {
-								Global.getCombatEngine().getCombatUI().addMessage(1, ship.getFleetMember(), Misc.getPositiveHighlightColor(), ship.getName(), Misc.getTextColor(), "", Global.getSettings().getColor("standardTextColor"), "is skilled in "+text);}
+								Global.getCombatEngine().getCombatUI().addMessage(1, ship.getFleetMember(), Misc.getPositiveHighlightColor(), ship.getName(), Misc.getTextColor(), "", Global.getSettings().getColor("standardTextColor"), "is skilled in " + text);
+							}
 						}
-						ship.setCurrentCR(ship.getCurrentCR()+ship.getMutableStats().getMaxCombatReadiness().getModifiedValue()); //Properly adds the max CR, for some reason it cannot be caught as FleetMemberAPI or this would have been easier...
-						ship.setCRAtDeployment(ship.getCRAtDeployment()+ship.getMutableStats().getMaxCombatReadiness().getModifiedValue()); //This only affects the "score" result of said mission, but the algorithm is mostly 100% since you have to basically LOSE ships to lose score. I don't think this needs setting, but eh couldn't help but tried.
+						ship.setCurrentCR(ship.getCurrentCR() + ship.getMutableStats().getMaxCombatReadiness().getModifiedValue()); //Properly adds the max CR, for some reason it cannot be caught as FleetMemberAPI or this would have been easier...
+						ship.setCRAtDeployment(ship.getCRAtDeployment() + ship.getMutableStats().getMaxCombatReadiness().getModifiedValue()); //This only affects the "score" result of said mission, but the algorithm is mostly 100% since you have to basically LOSE ships to lose score. I don't think this needs setting, but eh couldn't help but tried.
 						ship.setCustomData("poopystinky", true); //Fires once per ship.
 					}
 				}
 			}
 		});
 	}
-
 }
 
 

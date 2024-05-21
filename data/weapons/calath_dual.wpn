@@ -1,0 +1,53 @@
+{
+  "id": "calath_dual",
+  "specClass": "projectile",
+  "projectileSpecId": "calath_torp",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "everyFrameEffect": "bing.faesector.data.weapons.fae_calath_wpn",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/calath_rack_med_turret.png",
+  "turretGunSprite": "graphics/weapons/calath_rack_med_turret.png",
+  "hardpointSprite": "graphics/weapons/calath_rack_med_hardpoint.png",
+  "hardpointGunSprite": "graphics/weapons/calath_rack_med_hardpoint.png",
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "turretOffsets": [
+    3,
+    7,
+    3,
+    -7
+  ],
+  "turretAngleOffsets": [
+    0,
+    -0
+  ],
+  "hardpointOffsets": [
+    10,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 16,
+    "particleSizeRange": 18,
+    "cloudParticleCount": 8,
+    "cloudDuration": 1.5,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 4,
+    "blowbackDuration": 2,
+    "blowbackLength": 22,
+    "blowbackSpread": 15,
+    "particleColor": [
+      125,
+      15,
+      25,
+      105
+    ]
+  },
+  "fireSoundTwo": "fae_torpedo_launch"
+}

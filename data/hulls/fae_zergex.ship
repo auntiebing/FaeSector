@@ -9,8 +9,13 @@
   "center": [18, 31],
   "collisionRadius": 45.5,
   "shieldCenter": [0, -0],
-  "shieldRadius": 36.5,
+  "shieldRadius": 38.5,
   "viewOffset": 0,
+  "builtInMods": [
+    "fae_EscapePod",
+    "ground_support",
+    "fae_ARES"
+  ],
   "weaponSlots": [
     {
       "id": "WS1",
@@ -26,53 +31,53 @@
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "HIDDEN",
-      "arc": 0,
+      "arc": 7,
       "angle": 0,
-      "locations": [22.5, -8.5]
+      "locations": [22, -8.5]
     },
     {
       "id": "HP4",
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "HIDDEN",
-      "arc": 0,
+      "arc": 7,
       "angle": -0,
-      "locations": [22.5, 8.5]
+      "locations": [22, 8.5]
     },
     {
       "id": "HP2",
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "HIDDEN",
-      "arc": 0,
+      "arc": 7,
       "angle": 0,
-      "locations": [29.5, -2.5]
+      "locations": [29, -2.5]
     },
     {
       "id": "HP3",
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "HIDDEN",
-      "arc": 0,
+      "arc": 7,
       "angle": -0,
-      "locations": [29.5, 2.5]
+      "locations": [29, 2.5]
     }
   ],
   "engineSlots": [
     {
-      "location": [-24, -5.5],
-      "length": 18,
-      "width": 6,
+      "location": [-24, -5],
+      "length": 17.5,
+      "width": 5,
       "angle": -180,
-      "contrailSize": 6,
+      "contrailSize": 5,
       "style": "HIGH_TECH"
     },
     {
-      "location": [-24, 5.5],
-      "length": 18,
-      "width": 6,
+      "location": [-24, 5],
+      "length": 17.5,
+      "width": 5,
       "angle": 180,
-      "contrailSize": 6,
+      "contrailSize": 5,
       "style": "HIGH_TECH"
     }
   ],

@@ -10,6 +10,7 @@
   "turretGunSprite": "graphics/weapons/tasuan_barrel.png",
   "hardpointSprite": "graphics/weapons/tasun_base.png",
   "hardpointGunSprite": "graphics/weapons/tasuan_barrel.png",
+  "everyFrameEffect": "bing.faesector.data.weapons.fae_tasuanFire",
   "visualRecoil": 15,
   "renderHints": [
     RENDER_BARREL_BELOW
@@ -44,11 +45,12 @@
     "particleDuration": 0.12,
     "particleCount": 12,
     "particleColor": [
-      210,
+      190,
       150,
       220,
-      210
+      185
     ]
   },
-  "fireSoundTwo": "fae_tasuan"
+  "fireSoundOne": "fae_tasuan_chargeup",
+  "fireSoundTwo": "fae_tasuan",
 }

@@ -1,5 +1,22 @@
 {
 	"combatLarge": {
-		"faesector_lupine_Brute": 10
+		"fae_lupine_Brute": 10,
+		"fae_lupine_Interdictor": 10
 	},
+	"combatSmall": {
+		"fae_lupine_Brute": 10,
+		"fae_lupine_Interdictor": 10
+	},
+	"TradeLarge": {
+		"fae_lupine_Brute": 10,
+		"fae_lupine_Interdictor": 10
+	},
+	"TradeSmall": {
+		"fae_lupine_Brute": 10,
+		"fae_lupine_Interdictor": 10
+	},
+	"Solo": {
+		"fae_lupine_Brute": 10,
+		"fae_lupine_Interdictor": 10
+	}
 }

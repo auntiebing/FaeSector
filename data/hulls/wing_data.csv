@@ -1,3 +1,3 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
-fae_virgix_wing,fae_virgix_Standard,"interceptor, no_drop, no_sell, restricted",1,,2,0,V,0,0,-200,3,SUPPORT,Auxiliary,12,5000,,,,,,,,,,,,,
-fae_zergex_wing,fae_zergex_Standard,"fighter, mid, no_drop, no_sell, restricted",2,,11,20,V,4000,500,,1,FIGHTER,Corvette,15,15000,,,,,,,,,,,,,
+fae_virgix_wing,fae_virgix_Standard,"interceptor1, interceptor, no_drop, no_sell, restricted, stay_in_front_of_ship",2,,6,4,CLAW,0,500,,4,INTERCEPTOR,Auxiliary,5,5000,,,,,,,,,,,,,
+fae_zergex_wing,fae_zergex_Standard,"fighter, mid, no_drop, no_sell, restricted",2,,11,20,V,1000,500,,1,SUPPORT,Corvette,15,15000,,,,,,,,,,,,,

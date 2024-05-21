@@ -1,0 +1,53 @@
+{
+  "variantId": "fae_lupine_Interdictor",
+  "hullId": "fae_lupine",
+  "displayName": "Interdictor",
+  "goalVariant": true,
+  "fluxCapacitors": 18,
+  "fluxVents": 30,
+  "quality": 2,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "LS1": "fae_zethell"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MS1": "ulupe",
+        "MS2": "ulupe",
+        "MS3": "ulupe",
+        "MS4": "ulupe"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "SM1": "lupe",
+        "SM2": "lupe",
+        "SM5": "lupe",
+        "SM6": "lupe"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MS5": "calath_dual",
+        "SM3": "calath",
+        "SM4": "calath"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

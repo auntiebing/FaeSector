@@ -29,7 +29,7 @@
     },
     # variantOverrides restricts hulls to listed variants and adjusts their probability
     "variantOverrides":{
-        "faesector_lupine_Brute":10,
+        "fae_lupine_Brute":10,
     },
     # multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
@@ -84,14 +84,18 @@
 			
 			"conquest",
 			"pegasus",
-			"faesector_lupine"
+			"fae_lupine",
+			"fae_oryza",
+			"fae_dahlia",
+			"fae_celvas",
+			"fae_terleth",
         ],
     },
     # listing ships here will make the faction mostly use them even if other hulls become available
     "priorityShips":{
         "tags":[],
         "hulls":[
-			"faesector_lupine",
+			"fae_lupine",
         ],
     },
     "knownFighters":{
@@ -101,13 +105,14 @@
 			"gladius_wing",
 			"talon_wing",
 			"claw_wing",
-			"fae_virgix_wing"
+			"fae_virgix_wing",
+			"fae_zergex_wing",
         ],
     },
     "priorityFighters":{
         "tags":[],
         "fighters":[
-			"fae_virgix_wing"
+			"fae_virgix_wing",
         ],
     },
     "knownWeapons":{
@@ -169,8 +174,13 @@
 			"lupe",
 			"lirim",
 			"calath",
+			"calath_dual",
 			"fae_Z_threat",
 			"balphus",
+			"elthaem",
+			"mequas",
+			"fae_zethell",
+			"fae_zethell_F",
         ],
     },
     "priorityWeapons":{
@@ -187,8 +197,8 @@
         "lightag":5,
         "railgun":5,
 
-        "heavyac":10,
-        "heavymortar":10,
+        "heavyac":5,
+        "heavymortar":5,
         "flak":5,
         "dualflak":5,
 
@@ -209,12 +219,18 @@
         "phasebeam":2,
         "hil":10,
         "autopulse":5,
+		"tasuan":10,
+		"ulupe":10,
+		"lupe":10,
+		"lirim":5,
+		"calath":5,
     },
     "fighterSellFrequency":{
     },
     "hullmodSellFrequency":{
         "solar_shielding":10,
-        "missile_autoloader":5,
+		"hardenedhardenedshieldemitter":5,
+		"stabilizedshieldemitter":5,
     },
     "factionDoctrine":{
         "warships":5,
@@ -234,7 +250,7 @@
         "combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
         "autofitRandomizeProbability":0,					# there is no room for chance in the Queen's Grand Plan
 
-		        "officerSkillsShuffleProbability":1f,
+		"officerSkillsShuffleProbability":1f,
         "officerSkills":[
             "ballistic_mastery",
             "energy_weapon_mastery",
