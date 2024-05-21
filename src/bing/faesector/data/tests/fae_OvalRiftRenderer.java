@@ -9,6 +9,7 @@ import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
 import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
+import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 import penner.easing.Circ;
 import penner.easing.Sine;
@@ -75,8 +76,8 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
             float xLocF = (float) (Math.cos(rad + noise.noise2(i + Statics.t, i + Statics.t)));
             float yLocF = (float) (Math.sin(rad));
 
-            float xLoc = (float) ((xLocF * OvalX) * sizeMultX);
-            float yLoc = (float) ((yLocF * OvalY) * sizeMultY);
+            float xLoc = (xLocF * OvalX) * sizeMultX;
+            float yLoc = (yLocF * OvalY) * sizeMultY;
 
             Vector2f loc = new Vector2f(xLoc + sourceLocation.x, yLoc + sourceLocation.y);
 

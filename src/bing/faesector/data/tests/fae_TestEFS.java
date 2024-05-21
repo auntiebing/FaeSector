@@ -39,19 +39,26 @@ public class fae_TestEFS extends BaseEveryFrameCombatPlugin {
 
                 Vector2f center = Global.getCombatEngine().getPlayerShip().getMouseTarget();
 
-//                fae_CombatRiftRenderer DiamondRift = new fae_CombatRiftRenderer(
+//                fae_CombatRiftRenderer plugin = new fae_CombatRiftRenderer(
 //                        new Vector2f(center),
 //                        VectorUtils.getAngle(Global.getCombatEngine().getPlayerShip().getMouseTarget(), Global.getCombatEngine().getPlayerShip().getLocation())
 //                );
-//                Global.getCombatEngine().addLayeredRenderingPlugin(DiamondRift);
 
-                fae_OvalRiftRenderer OvalRift = new fae_OvalRiftRenderer(
-                        new Vector2f(center),
+//                fae_OvalRiftRenderer plugin = new fae_OvalRiftRenderer(
+//                        new Vector2f(center),
+//                        VectorUtils.getAngle(Global.getCombatEngine().getPlayerShip().getMouseTarget(), Global.getCombatEngine().getPlayerShip().getLocation()),
+//                        500,
+//                        250
+//                );
+
+                fae_RingRenderTest plugin = new fae_RingRenderTest(
+                                                new Vector2f(center),
                         VectorUtils.getAngle(Global.getCombatEngine().getPlayerShip().getMouseTarget(), Global.getCombatEngine().getPlayerShip().getLocation()),
                         500,
                         250
                 );
-                Global.getCombatEngine().addLayeredRenderingPlugin(OvalRift);
+
+                Global.getCombatEngine().addLayeredRenderingPlugin(plugin);
 
             }
         }

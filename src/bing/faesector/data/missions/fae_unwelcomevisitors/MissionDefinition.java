@@ -62,7 +62,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set up the enemy fleet
 		api.getDefaultCommander(FleetSide.ENEMY).getStats().setSkillLevel(Skills.FIGHTER_UPLINK, 1);
-		FleetMemberAPI member7 = api.addToFleet(FleetSide.ENEMY, "eagle_xiv_elite", FleetMemberType.SHIP, "HSS Naga", true);
+		FleetMemberAPI member7 = api.addToFleet(FleetSide.ENEMY, "eagle_xiv_Elite", FleetMemberType.SHIP, "HSS Naga", true);
 		PersonAPI officer2 = OfficerManagerEvent.createOfficer(Global.getSector().getFaction("fairies"), 5, FleetFactoryV3.getSkillPrefForShip(member7), true, null, true, true, 1, new Random());
 		officer2.getName().setFirst(""); //No first name? unless I find it somehow....
 		officer2.getName().setLast("Phobos");
@@ -71,7 +71,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		officer2.setPersonality(Personalities.AGGRESSIVE);
 		member7.setCaptain(officer2);
 
-		FleetMemberAPI member8 = api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_elite", FleetMemberType.SHIP, false);
+		FleetMemberAPI member8 = api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, false);
 		member8.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.HEGEMONY), 1, FleetFactoryV3.getSkillPrefForShip(member8), true, null, true, true, 1, new Random()));
 		member8.getCaptain().setPersonality(Personalities.AGGRESSIVE);
 		FleetMemberAPI member9 = api.addToFleet(FleetSide.ENEMY, "enforcer_Assault", FleetMemberType.SHIP, false);
