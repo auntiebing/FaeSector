@@ -37,9 +37,9 @@
     "particleDuration": 0.1,
     "particleCount": 32,
     "particleColor": [
-      220,
+      70,
       180,
-      200,
+      135,
       165
     ]
   },

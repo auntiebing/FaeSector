@@ -3,7 +3,7 @@
 	"type":"STAT_MOD",
 	"aiType":"WEAPON_BOOST",
 	
-	"statsScript":"bing.faesector.data.fae_fluxRedirection",
+	"statsScript":"bing.faesector.data.shipsystems.fae_fluxRedirection",
 	
 	"weaponGlowColor":[255,50,0,155],
 	"weaponTypes":[BALLISTIC,ENERGY],

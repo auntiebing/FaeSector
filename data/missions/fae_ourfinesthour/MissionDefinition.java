@@ -44,14 +44,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// Set up the player's fleet
 		// Set up the player's fleet
 		api.getDefaultCommander(FleetSide.PLAYER).getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 1);
-		FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Holdma", true);
+		FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Holdma", true);
 		PersonAPI officer = OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 4, FleetFactoryV3.getSkillPrefForShip(member), true, null, true, false, 0, new Random());
 		member.setCaptain(officer);
-		FleetMemberAPI member2 = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Sugma", false);
+		FleetMemberAPI member2 = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Sugma", false);
 		member2.setCaptain(OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 1, FleetFactoryV3.getSkillPrefForShip(member2), true, null, true, false, 0, new Random()));
-		FleetMemberAPI member3 = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Ligma", false);
+		FleetMemberAPI member3 = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Ligma", false);
 		member3.setCaptain(OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 1, FleetFactoryV3.getSkillPrefForShip(member3), true, null, true, false, 0, new Random()));
-		FleetMemberAPI member4 = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Grabma", false);
+		FleetMemberAPI member4 = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Grabma", false);
 		member4.setCaptain(OfficerManagerEvent.createOfficer(Global.getSettings().getModManager().isModEnabled("faesector") ? Global.getSector().getFaction("fairies") : Global.getSector().getFaction(Factions.INDEPENDENT), 1, FleetFactoryV3.getSkillPrefForShip(member4), true, null, true, false, 0, new Random()));
 
 		// Mark player flagship as essential

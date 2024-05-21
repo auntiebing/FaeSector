@@ -1,0 +1,62 @@
+{
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "barrelMode": "ALTERNATING",
+  "displayArcRadius": 600,
+  #"fireSoundOne": "",
+  "fireSoundTwo": "",
+  "glowColor": [
+    220,
+    220,
+    255,
+    255
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "hardpointGunSprite": "",
+  "hardpointGlowSprite": "",
+  "hardpointOffsets": [
+    36,
+    0
+  ],
+  "hardpointSprite": "",
+  "id": "fae_zethell_F",
+  "muzzleFlashSpec": {
+    "length": 50,
+    "particleColor": [
+    220,
+    220,
+    255,
+    255
+    ],
+     "particleCount": 10,
+    "particleDuration": 0.5,
+    "particleSizeMin": 10,
+    "particleSizeRange": 10,
+    "spread": 20
+  },
+  "noImpactSounds": false,
+  "noNonShieldImpactSounds": false,
+  "noShieldImpactSounds": false,
+  "projectileSpecId": "fae_zethell_F_shot",
+  "renderAboveAllWeapons": 0,
+  "renderHints": [
+    "RENDER_BARREL_BELOW"
+  ],
+  "size": "LARGE",
+  "specClass": "projectile",
+  "textureType": ROUGH,
+  "turretAngleOffsets": [
+    0
+  ],
+  "turretGunSprite": "",
+  "turretGlowSprite": "",
+  "turretOffsets": [
+    36,
+    0
+  ],
+  "turretSprite": "",
+  "type": "MISSILE",
+  "visualRecoil": 6
+}

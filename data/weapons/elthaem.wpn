@@ -1,17 +1,16 @@
 {
-  "id": "mequas",
+  "id": "elthaem",
   "specClass": "projectile",
   "projectileSpecId": "lupe_shot",
   "type": "ENERGY",
   "size": "SMALL",
-  "displayArcRadius": 650,
   "turretSprite": "graphics/weapons/lupe_base.png",
   "turretGunSprite": "graphics/weapons/lupe_barrel.png",
   "hardpointSprite": "graphics/weapons/lupe_base.png",
   "hardpointGunSprite": "graphics/weapons/lupe_barrel.png",
-  "specialWeaponGlowHeight": 40,
-  "specialWeaponGlowWidth": 15,
-  "visualRecoil": 5,
+  "specialWeaponGlowHeight": 20,
+  "specialWeaponGlowWidth": 7.5,
+  "visualRecoil": 4,
   "renderHints": [
     RENDER_BARREL_BELOW
   ],
@@ -42,22 +41,19 @@
     0
   ],
   "barrelMode": "ALTERNATING",
-  "animationType": "SMOKE",
-  "smokeSpec": {
-    "particleSizeMin": 1,
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 10,
+    "spread": 3,
+    "particleSizeMin": 6,
     "particleSizeRange": 8,
-    "cloudParticleCount": 3,
-    "cloudDuration": 0.1,
-    "cloudRadius": 2,
-    "blowbackParticleCount": 0,
-    "blowbackDuration": 0,
-    "blowbackLength": 0,
-    "blowbackSpread": 0,
+    "particleDuration": 0.15,
+    "particleCount": 7,
     "particleColor": [
-      55,
-      215,
-      210,
-      150
+      50,
+      185,
+      155,
+      200
     ]
   },
   "fireSoundTwo": "fae_light"

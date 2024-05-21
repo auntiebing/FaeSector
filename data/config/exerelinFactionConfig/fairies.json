@@ -18,7 +18,7 @@
     },
     "diplomacyTraits":["paranoid", "monopolist", "temperamental", "devious"],
 
-    "factionIdForHqResponse":"lions_guard",
+    "factionIdForHqResponse":"fairies",
     "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.DiktatNamer",
     "specialForcesMaxFleets":1,
 
@@ -26,23 +26,22 @@
     "colonyExpeditionChance":0.75,	# not really their kind of thing...? I guess
 
     "startShipsSolo":[
-        ["centurion_LG_Assault"]
+        ["fae_terleth_Storm"]
     ],
     "startShipsCombatSmall":[
-        ["hammerhead_LG_Elite", "vigilance_AP", "brawler_LG_Elite"]
+        ["fae_oryza_Standard", "fae_terleth_Storm", "fae_terleth_Storm"]
     ],
-    "startShipsTradeSmall":[["tarsus_Standard", "centurion_LG_Assault", "mercury_PD"]],
+    "startShipsTradeSmall":[
+        ["fae_celvas_Standard", "fae_oryza_Standard", "fae_terleth_Storm"]
+
+    ],
     "startShipsCombatLarge":[
-        ["swp_vulture_sta", "sunder_LG_Assault", "swp_alastor_sta"],
-        ["eagle_LG_Support", "hammerhead_LG_Elite", "vigilance_FS"]
+        ["fae_lupine_Brute", "fae_lupine_Interdictor", "fae_oryza_Standard"],
+        ["fae_lupine_Brute", "fae_lupine_Interdictor", "fae_terleth_Storm"]
     ],
-    "startShipsTradeLarge":[["colossus_Standard", "mule_Standard", "wayfarer_Standard"]],
-    "startShipsExplorerLarge":[["venture_Balanced", "gemini_Standard", "wayfarer_Standard"]],
+    "startShipsTradeLarge":[["fae_celvas_Standard", "fae_celvas_Standard", "fae_dahlia_Standard"]],
+    "startShipsExplorerLarge":[["fae_lupine_Brute", "fae_celvas_Standard", "fae_dahlia_Standard"]],
     #"startShipsCarrierSmall":[["drover_Strike", "vigilance_Standard", "brawler_Elite"]],
-    #"startShipsCarrierLarge":[
-    #  ["swp_heron_lions_guard_eli", "swp_archon_att", "kite_Standard"],
-#  ["heron_Strike", "sunder_Assault", "centurion_Starting"]
-#],
 
 "startSpecialItems":[
 [["midline_package", ""]],

@@ -6,15 +6,15 @@
   "size": "SMALL",
   "everyFrameEffect": "bing.faesector.data.weapons.fae_calath_wpn",
   "displayArcRadius": 1000,
-  "turretSprite": "graphics/weapons/solo_turret.png",
-  "turretGunSprite": "graphics/weapons/solo_turret.png",
-  "hardpointSprite": "graphics/weapons/solo_hardpoint.png",
-  "hardpointGunSprite": "graphics/weapons/solo_hardpoint.png",
+  "turretSprite": "graphics/weapons/calath_rack_turret.png",
+  "turretGunSprite": "graphics/weapons/calath_rack_turret.png",
+  "hardpointSprite": "graphics/weapons/calath_rack_hardpoint.png",
+  "hardpointGunSprite": "graphics/weapons/calath_rack_hardpoint.png",
   "renderHints": [
     RENDER_LOADED_MISSILES
   ],
   "turretOffsets": [
-    7,
+    2.5,
     0
   ],
   "turretAngleOffsets": [

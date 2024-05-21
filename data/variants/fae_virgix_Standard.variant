@@ -1,0 +1,23 @@
+{
+  "variantId": "fae_virgix_Standard",
+  "hullId": "fae_virgix",
+  "displayName": "Interceptor",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS1": "elthaem",
+        "WS2": "elthaem"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -3,7 +3,7 @@
 	"type":"SHIELD_MOD",
 	"aiType":"FORTRESS_SHIELD",
 
-	"statsScript":"bing.faesector.data.fae_shield",
+	"statsScript":"bing.faesector.data.shipsystems.fae_shield",
 	
 	"shieldRingColor":[255,255,255,255],
 	"shieldInnerColor":[100,255,200,75],

@@ -2,6 +2,7 @@ package bing.faesector.data;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import org.lazywizard.lazylib.MathUtils;
@@ -75,6 +76,7 @@ public class fae_misc {
         cc.add(Global.getSettings().getColor("fae_color_teal"));
         cc.add(Global.getSettings().getColor("fae_color_pink"));
         cc.add(Global.getSettings().getColor("fae_color_blue"));
+        cc.add(Global.getSettings().getColor("fae_color_green"));
         return cc.pick();
     }
 
@@ -88,7 +90,43 @@ public class fae_misc {
         return p3;
     }
 
-}
 
+    public static SpriteAPI getSpriteFromSheet(String key, int hor, int vert, int index){
+        int k=0;
+        int m=0;
+        int g=0;
+        int ii = hor*vert-index;
+        for(int i = 0; i<hor; i++){
+            for(int j = 0; j<hor; j++){
+                if(g==ii){
+                    k=j;m=i;
+                }
+                g++;
+            }
+        }
+
+        return getSpriteFromSheet(key, hor, vert, k, m);
+
+    }
+
+    public static SpriteAPI getSpriteFromSheet(String key, int hor, int vert, int ix, int iy){
+
+        SpriteAPI sprite = Global.getSettings().getSprite("fx", key);
+        //sprite = Global.getSettings().getSprite("misc", "dust_particles");
+        float hf = 1f/hor;
+        float vf = 1f/vert;
+        sprite.setTexWidth(hf);
+        sprite.setTexHeight(vf);
+        sprite.setTexX(ix * hf);
+        sprite.setTexY(iy * vf);
+        return sprite;
+    }
+    public static class m{
+        public static float isq(float x){
+            return 1-(x-1)*(x-1);
+        }
+    }
+
+}
 
 

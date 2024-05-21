@@ -7,13 +7,13 @@
   "turretSprite": "graphics/weapons/balphus_turret.png",
   "hardpointSprite": "graphics/weapons/balphus_turret.png",
   "renderHints": [
-    "RENDER_BARREL_BELOW"
+    RENDER_BARREL_BELOW
   ],
   "turretOffsets": [
     9,
-    -2.5,
+    2.5,
     9,
-    2.5
+    -2.5
   ],
   "turretAngleOffsets": [
     0,
@@ -21,9 +21,9 @@
   ],
   "hardpointOffsets": [
     15,
-    -2.5,
+    2.5,
     15,
-    2.5
+    -2.5
   ],
   "hardpointAngleOffsets": [
     0,
@@ -32,17 +32,17 @@
   "barrelMode": "ALTERNATING",
   "animationType": "MUZZLE_FLASH",
   "muzzleFlashSpec": {
-    "length": 30,
+    "length": 10,
     "spread": 0,
-    "particleSizeMin": 7,
-    "particleSizeRange": 7,
-    "particleDuration": 0.2,
-    "particleCount": 12,
+    "particleSizeMin": 6,
+    "particleSizeRange": 8,
+    "particleDuration": 0.15,
+    "particleCount": 7,
     "particleColor": [
-      255,
-      255,
-      255,
-      175
+      50,
+      185,
+      155,
+      200
     ]
   },
   "fireSoundTwo": "needler_fire"

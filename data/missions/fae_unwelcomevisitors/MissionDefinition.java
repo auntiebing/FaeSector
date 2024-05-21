@@ -13,6 +13,7 @@ import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -26,22 +27,21 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 	public void defineMission(MissionDefinitionAPI api) {
 
 		// Set up the fleets
-		api.initFleet(FleetSide.PLAYER, "XRS", FleetGoal.ATTACK, true);
-		api.initFleet(FleetSide.ENEMY, "HSS", FleetGoal.ATTACK, false, 5);
+		api.initFleet(FleetSide.PLAYER, "XRS", FleetGoal.ATTACK, false);
+		api.initFleet(FleetSide.ENEMY, "HSS", FleetGoal.ATTACK, true, 5);
 
 		// Set a blurb for each fleet
 		api.setFleetTagline(FleetSide.PLAYER, "XRS Holdma and her escort");
 		api.setFleetTagline(FleetSide.ENEMY, "Hegemony Vanguard led by HSS Defiant");
-		
-		// These show up as items in the bulleted list under 
+
+		// These show up as items in the bulleted list under
 		// "Tactical Objectives" on the mission detail screen
 		api.addBriefingItem("Destroy the invaders. Let none survive to tell the tale.");
-		api.addBriefingItem("Outnumbered, but not outgunned. Pick your fights carefully and do not allow yourself to be surrounded.");
-		api.addBriefingItem("Be wary of missiles and strike fighters. Utilize the EMP of your Zelênthar Boost to escape and neutralize these hazards.");
-		api.addBriefingItem("Do not allow your Lupine-class Prototype to be destroyed.");
-		
+		api.addBriefingItem("Outnumbered, but not outgunned. Pick your fights carefully.");
+		api.addBriefingItem("Be wary of missiles and strike fighters. Utilize the EMP of your Zelênthar Boost to escape these hazards.");
+
 		// Set up the player's fleet
-		FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, "faesector_lupine_Brute", FleetMemberType.SHIP, "XRS Holdma", true);
+		FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Holdma", true);
 		PersonAPI officer = Global.getSettings().createPerson();
 		officer.setPortraitSprite(OfficerManagerEvent.pickPortraitPreferNonDuplicate(Global.getSector().getFaction(Factions.INDEPENDENT), FullName.Gender.ANY));
 		officer.getStats().setSkillLevel(Skills.SYSTEMS_EXPERTISE, 2);
@@ -53,31 +53,33 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		member.setCaptain(officer);
 
 		FleetMemberAPI member2 = api.addToFleet(FleetSide.PLAYER, "lasher_CS", FleetMemberType.SHIP, "XRS Sugma", false);
-		member2.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.INDEPENDENT), 1, FleetFactoryV3.getSkillPrefForShip(member2), true, null, true, true, 1, new Random()));
+		member2.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction("fairies"), 1, FleetFactoryV3.getSkillPrefForShip(member2), true, null, true, true, 1, new Random()));
 		FleetMemberAPI member3 = api.addToFleet(FleetSide.PLAYER, "condor_Support", FleetMemberType.SHIP, "XRS Ligma", false);
-		member3.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.INDEPENDENT), 2, FleetFactoryV3.getSkillPrefForShip(member3), true, null, true, true, 1, new Random()));
+		member3.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction("fairies"), 2, FleetFactoryV3.getSkillPrefForShip(member3), true, null, true, true, 1, new Random()));
 
 		// Mark flagship as essential
-		api.defeatOnShipLoss("ISS Enki");
+		api.defeatOnShipLoss("XRS Holdma");
 
 		// Set up the enemy fleet
-		FleetMemberAPI phoenix = api.addToFleet(FleetSide.ENEMY, "eagle_xiv_Elite", FleetMemberType.SHIP, "HSS Defiant", false);
-		PersonAPI officer2 = Global.getSettings().createPerson();
-		officer2.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 1);
-		officer2.getStats().setSkillLevel(Skills.ORDNANCE_EXPERTISE, 1);
-		officer2.getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
-		officer2.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);
-		officer2.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
-		officer2.getStats().setLevel(5);
-		officer2.setFaction(Factions.HEGEMONY);
-		officer2.setPortraitSprite(OfficerManagerEvent.pickPortraitPreferNonDuplicate(Global.getSector().getFaction(Factions.HEGEMONY), FullName.Gender.ANY));
-		phoenix.setCaptain(officer2);
+		api.getDefaultCommander(FleetSide.ENEMY).getStats().setSkillLevel(Skills.FIGHTER_UPLINK, 1);
+		FleetMemberAPI member7 = api.addToFleet(FleetSide.ENEMY, "eagle_xiv_elite", FleetMemberType.SHIP, "HSS Naga", true);
+		PersonAPI officer2 = OfficerManagerEvent.createOfficer(Global.getSector().getFaction("fairies"), 5, FleetFactoryV3.getSkillPrefForShip(member7), true, null, true, true, 1, new Random());
+		officer2.getName().setFirst(""); //No first name? unless I find it somehow....
+		officer2.getName().setLast("Phobos");
+		officer2.setGender(FullName.Gender.MALE);
+		officer2.setPortraitSprite(OfficerManagerEvent.pickPortraitPreferNonDuplicate(Global.getSector().getFaction(Factions.HEGEMONY), FullName.Gender.MALE));
+		officer2.setPersonality(Personalities.AGGRESSIVE);
+		member7.setCaptain(officer2);
 
-		FleetMemberAPI heg1 = api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_Elite", FleetMemberType.SHIP, "HSS Magic", false);
-		heg1.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.HEGEMONY), 4, FleetFactoryV3.getSkillPrefForShip(heg1), true, null, true, true, 1, new Random()));
-		FleetMemberAPI heg2 = api.addToFleet(FleetSide.ENEMY, "enforcer_Assault", FleetMemberType.SHIP, false);
-		heg2.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.HEGEMONY), 3, FleetFactoryV3.getSkillPrefForShip(heg2), true, null, true, true, 1, new Random()));
-		api.addToFleet(FleetSide.ENEMY, "condor_Strike", FleetMemberType.SHIP, "HSS Bulwark", false);
+		FleetMemberAPI member8 = api.addToFleet(FleetSide.ENEMY, "enforcer_XIV_elite", FleetMemberType.SHIP, false);
+		member8.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.HEGEMONY), 1, FleetFactoryV3.getSkillPrefForShip(member8), true, null, true, true, 1, new Random()));
+		member8.getCaptain().setPersonality(Personalities.AGGRESSIVE);
+		FleetMemberAPI member9 = api.addToFleet(FleetSide.ENEMY, "enforcer_Assault", FleetMemberType.SHIP, false);
+		member9.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.HEGEMONY), 1, FleetFactoryV3.getSkillPrefForShip(member9), true, null, true, true, 1, new Random()));
+		member9.getCaptain().setPersonality(Personalities.AGGRESSIVE);
+		FleetMemberAPI member10 = api.addToFleet(FleetSide.ENEMY, "condor_Strike", FleetMemberType.SHIP, false);
+		member10.setCaptain(OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.HEGEMONY), 1, FleetFactoryV3.getSkillPrefForShip(member10), true, null, true, true, 1, new Random()));
+		member10.getCaptain().setPersonality(Personalities.STEADY);
 
 		api.addToFleet(FleetSide.ENEMY, "hound_Standard", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.ENEMY, "hound_Standard", FleetMemberType.SHIP, false);
@@ -149,7 +151,6 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 	}
 
 }
-
 
 
 

@@ -1,0 +1,34 @@
+{
+	"id":"fae_override",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"bing.faesector.data.shipsystems.fae_shield",
+	
+	"jitterUnderColor":[80,250,170,155],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":7,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"jitterColor":[80,250,170,55],
+	"jitterCopies":2,
+	"jitterMinRange":0,
+	"jitterRange":5,
+	"jitterRangeRadiusFraction":0,
+
+	"weaponGlowColor":[255,165,90,0],
+    "weaponTypes":[ENERGY, BALLISTIC, MISSILE],
+
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_quantumdisruptor",
+	"loopSound":"system_damper_loop",
+	"deactivateSound":"system_damper_off",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+

@@ -1,0 +1,169 @@
+{
+  "hullName": "Terleth",
+  "hullId": "fae_terleth",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/fae_terleth.png",
+  "style": "MIDLINE",
+  "height": 140,
+  "width": 134,
+  "center": [67, 61],
+  "collisionRadius": 126,
+  "shieldCenter": [6, -0],
+  "shieldRadius": 104.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "dedicated_targeting_core"
+  ],
+  "builtInWings": [
+    "fae_virgix_wing",
+    "fae_virgix_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "MS1",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": 0,
+      "locations": [44, -15]
+    },
+    {
+      "id": "MS2",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": -0,
+      "locations": [44, 15]
+    },
+    {
+      "id": "SM1",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": -135,
+      "locations": [10, -25]
+    },
+    {
+      "id": "SM2",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 135,
+      "locations": [10, 25]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        87, -11,
+        87, -2
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        87, -65,
+        87, -73.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, 13],
+      "length": 49.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13, -13],
+      "length": 49.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-14, -0],
+      "length": 36,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -14, 6,
+    -13, 6,
+    -13, 18,
+    -2, 20,
+    -6, 27,
+    -6, 31,
+    -12, 31,
+    -13.5, 29,
+    -30, 31,
+    -34, 35,
+    -51, 38,
+    -51, 47,
+    -50, 51,
+    -32, 53,
+    -17, 53,
+    -21, 58.5,
+    -18, 62,
+    -14, 62,
+    3, 53,
+    3, 49,
+    10, 47,
+    22, 35,
+    48.5, 35,
+    57, 33,
+    60, 30,
+    60, 24,
+    66, 19,
+    67, 12.5,
+    73, 7,
+    73, -7,
+    67, -12.5,
+    66, -19,
+    60, -24,
+    60, -30,
+    57, -33,
+    48.5, -35,
+    22, -35,
+    10, -47,
+    3, -49,
+    3, -53,
+    -14, -62,
+    -18, -62,
+    -21, -58.5,
+    -17, -53,
+    -32, -53,
+    -50, -51,
+    -51, -47,
+    -51, -38,
+    -34, -35,
+    -30, -31,
+    -13.5, -29,
+    -12, -31,
+    -6, -31,
+    -6, -27,
+    -2, -20,
+    -13, -18,
+    -13, -6,
+    -14, -6
+  ]
+}

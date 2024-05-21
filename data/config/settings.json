@@ -7,12 +7,20 @@
 	"graphics": {
 		"fx": {
 			"fae_gradient_1": "graphics/fae/fx/fae_gradient1.png",
-			"fae_radial_fx_rotated": "graphics/fae/fx/fae_radial_fx_rotated.png"
+			"fae_radial_fx_rotated": "graphics/fae/fx/fae_radial_fx_rotated.png",
+			"muzzleTasuan": "graphics/fae/fx/muzzleTasuan.png",
+			"fae_flowers_sheet":"graphics/fae/fx/sheets/flowers_sheet.png",
+			"fae_rings_sheet":"graphics/fae/fx/sheets/rings_sheet.png",
+			"fae_rings_large_sheet":"graphics/fae/fx/sheets/rings_large_sheet.png",
+			"fae_smoke_sheet":"graphics/fae/fx/sheets/smoke_sheet.png",
+			"fae_shrapnel_sheet":"graphics/fae/fx/sheets/shrapnel_sheet.png",
+			"fae_runes_sheet":"graphics/fae/fx/sheets/runes_sheet.png"
 		}
 	},
 	"fae_color_teal": [ 70, 210, 185, 255 ],
 	"fae_color_blue": [ 110, 210, 220, 255 ],
-	"fae_color_pink": [ 210, 150, 220, 255 ]
+	"fae_color_pink": [ 210, 150, 220, 255 ],
+	"fae_colour_green": [ 60, 180, 90, 255 ]
 }
 
 

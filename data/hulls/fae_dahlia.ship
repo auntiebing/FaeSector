@@ -9,8 +9,14 @@
   "center": [72, 63],
   "collisionRadius": 105.5,
   "shieldCenter": [0, -0],
-  "shieldRadius": 97.5,
+  "shieldRadius": 100,
   "viewOffset": 0,
+  "builtInMods": [
+    "civgrade"
+  ],
+  "builtInWings": [
+    "fae_zergex_wing"
+  ],
   "weaponSlots": [
     {
       "id": "WS2",
@@ -61,7 +67,40 @@
       ]
     }
   ],
-  "engineSlots": [],
+  "engineSlots": [
+    {
+      "location": [-36, -23],
+      "length": 23,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-36, 23],
+      "length": 23,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-37, -12.5],
+      "length": 36.5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-37, 12.5],
+      "length": 36.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
   "bounds": [
     -60, 3.5,
     -57.5, 9,

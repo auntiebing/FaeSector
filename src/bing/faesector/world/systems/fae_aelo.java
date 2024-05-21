@@ -136,7 +136,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
         fae_miningMarket.setPrimaryEntity(fae_mining);
         //use helper method from other script to easily configure the market. feel free to copy it into your own project
         fae_miningMarket = bing.faesector.world.systems.fae_AddMarketplace.addMarketplace( //A Market is separate to a Planet, and contains data about population, industries and conditions. This is a method from the other script in this mod, that will assign all marketplace conditions to the planet in one go, making it simple and easy
-                Factions.INDEPENDENT, //Factions.INDEPENDENT references the id String of the Independent faction, so it is the same as writing "independent", but neater. This determines the Faction associated with this market
+                "fairies", //Factions.INDEPENDENT references the id String of the Independent faction, so it is the same as writing "independent", but neater. This determines the Faction associated with this market
                 fae_mining, //the PlanetAPI variable that this market will be assigned to
                 null, //some mods and vanilla will have additional floating space stations or other entities, that when accessed, will open this marketplace. We don't have any associated entities for this method to add, so we leave null
                 "Fae mining outpost", //Display name of market
@@ -254,7 +254,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
 
         //use helper method from other script to easily configure the market. feel free to copy it into your own project
         MarketAPI fae_capitalmarket = fae_AddMarketplace.addMarketplace( //A Market is separate to a Planet, and contains data about population, industries and conditions. This is a method from the other script in this mod, that will assign all marketplace conditions to the planet in one go, making it simple and easy
-                Factions.INDEPENDENT, //Factions.INDEPENDENT references the id String of the Independent faction, so it is the same as writing "independent", but neater. This determines the Faction associated with this market
+                "fairies", //Factions.INDEPENDENT references the id String of the Independent faction, so it is the same as writing "independent", but neater. This determines the Faction associated with this market
                 fae_arbora, //the PlanetAPI variable that this market will be assigned to
                 null, //some mods and vanilla will have additional floating space stations or other entities, that when accessed, will open this marketplace. We don't have any associated entities for this method to add, so we leave null
                 "Arboranita", //Display name of market
@@ -437,7 +437,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
                 "fae_relay",
                 "Ancient Relay",
                 Entities.COMM_RELAY,
-                Factions.INDEPENDENT
+                "fairies"
         );
         //assign an orbit
         fae_relay.setCircularOrbit(star, 270f, 5800f, 270f); //important, make sure fae capital has the same orbit days
