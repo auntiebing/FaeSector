@@ -1,25 +1,24 @@
 package bing.faesector.data.render.renderClassesFolder;
 
+import com.fs.starfarer.api.graphics.SpriteAPI;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.awt.*;
 
 public class RingData {
 
-    public RingData(Vector2f center, float segments, float circleAngle, float height, float lineWidth, Color lineColor) {
-        this.center = center;
-        this.segments = segments;
-        this.circleAngle = circleAngle;
-        this.height = height;
-        this.lineWidth = lineWidth;
-        this.lineColor = lineColor;
-    }
 
-    public Vector2f center;
-    public float segments;
-    public float circleAngle;
-    public float height;
-    public float lineWidth;
-    public Color lineColor;
+    public float width = 0f;
+
+    public SpriteAPI texture = null;
+    public boolean filled = true;
+    public Color color = new Color(255, 0, 0, 255);
+    private RenderMode mode = RenderMode.SCALE;
+    public Vector2f shape = new Vector2f(0, 0);
+    public Vector2f center = new Vector2f(0, 0);
+
+    public RenderMode getMode() {
+        return mode;
+    }
 
 }

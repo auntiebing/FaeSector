@@ -19,8 +19,7 @@ public class SquareRenderer {
     ) {//i am KİLLİNG myself java is such a retarted language thersnt even default paramaters even on the latest version for fucks sake
 
         SpriteAPI texture = square.texture;
-        boolean textureBool = false;
-        if (texture != null) textureBool = true;
+        boolean textureBool = texture != null;
 
         if (square.filled) {
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
