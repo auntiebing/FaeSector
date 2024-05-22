@@ -6,6 +6,22 @@
 	},
 	"graphics": {
 		"fx": {
+
+			"fae_stream_dark":"graphics/fae/fx/trails/fae_dark_stream.png",
+			"fae_stream_layer1":"graphics/fae/fx/trails/fae_stream_layer1.png",
+			"fae_stream_layer2":"graphics/fae/fx/trails/fae_stream_layer2.png",
+
+
+
+			"fae_FX_engineflame32":"graphics/fae/fx/engineflame32.png",
+
+
+			"fae_FX_star0":"graphics/starscape/star.png",
+			"fae_FX_star1":"graphics/starscape/star1.png",
+			"fae_FX_star2":"graphics/starscape/star2.png",
+			"fae_FX_star3":"graphics/starscape/star3.png",
+			"fae_FX_star4":"graphics/starscape/star4.png",
+
 			"fae_gradient_1": "graphics/fae/fx/fae_gradient1.png",
 			"fae_radial_fx_rotated": "graphics/fae/fx/fae_radial_fx_rotated.png",
 			"muzzleTasuan": "graphics/fae/fx/muzzleTasuan.png",
