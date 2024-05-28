@@ -128,7 +128,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
                 null
         );
 
-        SectorEntityToken fae_mining = system.addCustomEntity("fae_mining","Fae mining outpost","station_mining00", Factions.INDEPENDENT);
+        SectorEntityToken fae_mining = system.addCustomEntity("fae_mining","Fae mining outpost","station_mining00", "fairies");
         fae_mining.setCircularOrbitPointingDown(star,0,4150,135);
         MarketAPI fae_miningMarket = Global.getFactory().createMarket("fae_miningMarket","Fae mining outpost",4);
         fae_mining.setCustomDescriptionId("fae_mining");
@@ -226,7 +226,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
         PlanetAPI fae_arbora = system.addPlanet( //assigns instance of newly created planet to variable planetOne
                 "fae_arbora", //unique id string
                 star, //orbit focus for planet
-                "Arboranita", //display name of planet
+                "Arborantia", //display name of planet
                 "arbora_fae", //planet type id, comes from starsector-core/data/campaign/procgen/planet_gen_data.csv
                 20f, //starting angle in orbit
                 300f, //planet size
@@ -257,7 +257,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
                 "fairies", //Factions.INDEPENDENT references the id String of the Independent faction, so it is the same as writing "independent", but neater. This determines the Faction associated with this market
                 fae_arbora, //the PlanetAPI variable that this market will be assigned to
                 null, //some mods and vanilla will have additional floating space stations or other entities, that when accessed, will open this marketplace. We don't have any associated entities for this method to add, so we leave null
-                "Arboranita", //Display name of market
+                "Arborantia", //Display name of market
                 6, //population size
                 new ArrayList<>(Arrays.asList( //List of conditions for this method to iterate through and add to the market
                         Conditions.POPULATION_6,

@@ -4,11 +4,14 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Vector;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.util.IntervalUtil;
+import com.fs.starfarer.combat.entities.Ship;
+import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.opengl.GL11;
@@ -24,15 +27,15 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 		return  600f;
 	}
 	public static float TURN_BONUS = 20f;
-	
+
 	private Color color = new Color(100,255,100,255);
-	
+
 //	private Color [] colors = new Color[] {
 //			new Color(140, 100, 235),
 //			new Color(180, 110, 210),
 //			new Color(150, 140, 190),
 //			new Color(140, 190, 210),
-//			new Color(90, 200, 170), 
+//			new Color(90, 200, 170),
 //			new Color(65, 230, 160),
 //			new Color(20, 220, 70)
 //	};
@@ -117,7 +120,7 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 	private IntervalUtil pi1 = new IntervalUtil(freq, freq);
 	private IntervalUtil pi2 = new IntervalUtil(0f, 0f);
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
-		
+
 		if (stats.getEntity() instanceof ShipAPI) {
 			CombatEngineAPI engine = Global.getCombatEngine();
 			float amount = engine.getElapsedInLastFrame();
@@ -300,7 +303,7 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 				stats.getAcceleration().modifyPercent(id, SPEED_BONUS());
 				stats.getDeceleration().modifyPercent(id, SPEED_BONUS());
 
-				
+
 
 
 
@@ -329,7 +332,7 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 		stats.getAcceleration().unmodify(id);
 		stats.getDeceleration().unmodify(id);
 	}
-	
+
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
 			return new StatusData("improved maneuverability", false);

@@ -1,7 +1,7 @@
 {
-  "id": "tasuan",
+  "id": "tasuan_real",
   "specClass": "projectile",
-  "projectileSpecId": "tasuan_shot",
+  "projectileSpecId": "tasuan_shot_F",
   "type": "ENERGY",
   "mountTypeOverride":"HYBRID",
   "size": "LARGE",
@@ -12,11 +12,11 @@
   "hardpointSprite": "graphics/weapons/tasun_base.png",
   "hardpointGunSprite": "graphics/weapons/tasuan_barrel.png",
   "hardpointGlowSprite": "graphics/weapons/tasuan_glow.png",
-     "glowColor": [
-    178,
-    95,
-    229,
-    191
+   "glowColor": [
+    255,
+    255,
+    255,
+    255
   ],
   "visualRecoil": 15,
   "renderHints": [

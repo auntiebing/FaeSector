@@ -12,5 +12,6 @@
     <orderEntry type="library" name="CMUtils" level="project" />
     <orderEntry type="library" name="LazyLib-Console" level="project" />
     <orderEntry type="library" name="MagicLib-Kotlin" level="project" />
+    <orderEntry type="library" name="Graphics" level="project" />
   </component>
 </module>
