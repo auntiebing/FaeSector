@@ -5,7 +5,6 @@ import bing.faesector.world.FaesectorGen;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
-import bing.faesector.world.fae_people;
 import com.fs.starfarer.api.campaign.CampaignPlugin;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
@@ -32,11 +31,13 @@ public class fsModPlugin extends BaseModPlugin {
         }
         return null;
     }
-    @Override
+    /*@Override
     public void onNewGameAfterEconomyLoad() {
         MarketAPI fae_capitalmarket = Global.getSector().getEconomy().getMarket("fae_capitalmarket");
         if (fae_capitalmarket != null) {
             fae_people.create();
         }
     }
+ */
+
 }

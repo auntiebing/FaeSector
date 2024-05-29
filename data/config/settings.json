@@ -4,14 +4,16 @@
 		"fae_test_efs": "bing.faesector.data.tests.fae_TestEFS",
 		"fae_timer_efs": "bing.faesector.data.fae_CombatTimerEFS"
 	},
-	"characters": {
-		"fae_Queen": "graphics/fae/portraits/characters/fae_Queen.png",
-		"fae_Pixie": "graphics/fae/portraits/characters/fae_Pixie.png",
-		"fae_Miniem": "graphics/fae/portraits/characters/fae_Miniem.png",
-		"fae_Lilith": "graphics/fae/portraits/characters/fae_Lilith.png",
-		"fae_Kusakari": "graphics/fae/portraits/characters/fae_Kusakari.png"
-	},
 	"graphics": {
+		"characters": {
+			"queen": "graphics/portraits/characters/fae_Queen.png",
+			"velixie": "graphics/portraits/characters/fae_Pixie.png",
+			"miniem": "graphics/portraits/characters/fae_Miniem.png",
+			"lilith": "graphics/portraits/characters/fae_Lilith.png",
+			"kusakari": "graphics/portraits/characters/fae_Kusakari.png",
+			"blanche": "graphics/portraits/characters/blanche1.png",
+			"delilah": "graphics/portraits/characters/delilah1.png"
+		},
 		"fx": {
 
 			"fae_stream_dark":"graphics/fae/fx/trails/fae_dark_stream.png",

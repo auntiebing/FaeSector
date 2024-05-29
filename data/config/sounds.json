@@ -90,7 +90,16 @@
 	"fae_spinup":[
 		{"file":"sounds/effects/fae_spinup.ogg","pitch":1,"volume":0.8}
 	],
-
+	"fae_glint":[
+		{"file":"sounds/effects/fae_glint.ogg","pitch":1,"volume":0.8},
+		{"file":"sounds/effects/fae_glint.ogg","pitch":0.97, "volume":0.81},
+		{"file":"sounds/effects/fae_glint.ogg","pitch":0.94, "volume":0.83}
+	],
+	"fae_glint_release":[
+		{"file":"sounds/effects/fae_glint_release.ogg","pitch":1,"volume":0.8},
+		{"file":"sounds/effects/fae_glint_release.ogg","pitch":0.97, "volume":0.81},
+		{"file":"sounds/effects/fae_glint_release.ogg","pitch":0.94, "volume":0.83}
+	],
 	"fae_torpedo_launch":
 	[
 		{"file":"sounds/effects/fae_torpedo_launch.ogg","pitch":1.03,"volume":0.38},
