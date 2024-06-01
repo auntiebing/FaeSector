@@ -1,5 +1,7 @@
 package bing.faesector;
 
+import bing.faesector.data.helpers.ScriptBuilder;
+import bing.faesector.data.tests.fae_CampaignStarTest;
 import bing.faesector.data.weapons.fae_calathAI;
 import bing.faesector.world.FaesectorGen;
 import com.fs.starfarer.api.BaseModPlugin;
@@ -10,11 +12,15 @@ import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import exerelin.campaign.SectorManager;
+import org.codehaus.janino.ScriptEvaluator;
+import org.codehaus.commons.compiler.CompileException;
+import org.codehaus.janino.ExpressionEvaluator;
 
 
 public class fsModPlugin extends BaseModPlugin {
     public static final String CALATH_ID = "fae_calath";
     public static final boolean isExerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
+
     //public static boolean hasGraphicsLib;
     @Override
     public void onNewGame() {
@@ -22,6 +28,7 @@ public class fsModPlugin extends BaseModPlugin {
             new FaesectorGen().generate(Global.getSector());
         }
     }
+
     @Override
     public PluginPick<MissileAIPlugin> pickMissileAI(MissileAPI missile, ShipAPI launchingShip) {
         switch (missile.getProjectileSpecId()) {
@@ -31,4 +38,10 @@ public class fsModPlugin extends BaseModPlugin {
         }
         return null;
     }
+
+    @Override
+    public void onGameLoad(boolean onNewGame) {
+        Global.getSector().addScript(new fae_CampaignStarTest());
+    }
+
 }

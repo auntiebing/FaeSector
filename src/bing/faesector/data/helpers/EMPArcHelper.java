@@ -10,10 +10,10 @@ import org.lwjgl.util.vector.Vector2f;
 
 import java.util.Map;
 
-import static bing.faesector.data.helpers.fae_BoundsHelper.GetRandomBoundLocation;
+import static bing.faesector.data.helpers.BoundsHelper.GetRandomBoundLocation;
 
 
-public class fae_EMPArcHelper {
+public class EMPArcHelper {
 
     /**
      * spawns visual arc </br>

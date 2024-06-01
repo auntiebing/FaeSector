@@ -6,7 +6,7 @@ import org.lwjgl.util.vector.Vector2f;
 
 import java.util.List;
 
-public class fae_VectorHelper {
+public class VectorHelper {
 
     /**
      * returns the middle point of a list of vectors </br>

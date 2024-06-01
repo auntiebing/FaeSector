@@ -2,7 +2,7 @@ package bing.faesector.data.shipsystems;
 
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
-import static bing.faesector.data.helpers.fae_stringsManager.txt;
+import static bing.faesector.data.helpers.stringsManager.txt;
 
 public class fae_fluxRedirection extends BaseShipSystemScript {
 

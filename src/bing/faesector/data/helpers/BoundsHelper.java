@@ -9,7 +9,7 @@ import org.lwjgl.util.vector.Vector2f;
 import java.util.ArrayList;
 import java.util.List;
 
-public class fae_BoundsHelper {
+public class BoundsHelper {
 
     /**
      * gets a random bound </br>

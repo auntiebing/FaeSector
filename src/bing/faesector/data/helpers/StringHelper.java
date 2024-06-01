@@ -2,7 +2,7 @@ package bing.faesector.data.helpers;
 
 import java.awt.*;
 
-public class fae_StringHelper {
+public class StringHelper {
     /**
      * gets color from a string that haves hex <br>it shouldnt be effected by uppercase/lovercase <br>
      * for example: #a2f94cF3 as input (needs #)
@@ -133,7 +133,7 @@ public class fae_StringHelper {
      * @return the hex
      */
     public static String ColorToHexString(Color color, boolean isTransparent) {
-        return fae_ColorHelper.ColorToHexString(color, isTransparent);
+        return ColorHelper.ColorToHexString(color, isTransparent);
     }
 
     /**

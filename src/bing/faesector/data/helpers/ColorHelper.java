@@ -4,7 +4,7 @@ import bing.faesector.data.Statics;
 
 import java.awt.*;
 
-public class fae_ColorHelper {
+public class ColorHelper {
 
     /**
      * turns a Color into hex <br>
@@ -30,7 +30,7 @@ public class fae_ColorHelper {
      * @return the color
      */
     public static Color getColorFromHexString(String string) {
-        return fae_StringHelper.getColorFromHexString(string);
+        return StringHelper.getColorFromHexString(string);
     }
 
     public static Color randomColor(boolean isAlpha) {
@@ -41,6 +41,45 @@ public class fae_ColorHelper {
 
     public static Color randomiseAlpha(Color color) {
         return new Color(color.getRed(), color.getGreen(), color.getBlue(), Statics.random.nextInt(255));
+    }
+
+    static public Color hslColor(float h, float s, float l) {//https://stackoverflow.com/a/33947547/21149029
+        float q, p, r, g, b;//https://hslpicker.com/#f00
+
+        if (s == 0) {
+            r = g = b = l; // achromatic
+        } else {
+            q = l < 0.5 ? (l * (1 + s)) : (l + s - l * s);
+            p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1.0f / 3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1.0f / 3);
+        }
+        return new Color(Math.round(r * 255), Math.round(g * 255), Math.round(b * 255));
+    }
+
+    private static float hue2rgb(float p, float q, float h) {
+        if (h < 0) {
+            h += 1;
+        }
+
+        if (h > 1) {
+            h -= 1;
+        }
+
+        if (6 * h < 1) {
+            return p + ((q - p) * 6 * h);
+        }
+
+        if (2 * h < 1) {
+            return q;
+        }
+
+        if (3 * h < 2) {
+            return p + ((q - p) * 6 * ((2.0f / 3.0f) - h));
+        }
+
+        return p;
     }
 
 }

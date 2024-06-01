@@ -2,7 +2,7 @@ package bing.faesector.data.helpers;
 
 import java.awt.*;
 
-public class fae_Rainbow {
+public class Rainbow {
 
     private int colorRed = 254;
     private int colorGreen = 0;
@@ -44,20 +44,14 @@ public class fae_Rainbow {
         }
     }
 
-    /**
-     * gets the color rainbow </br>
-     *
-     * @param alpha
-     * @return the current color of rainbow(gay)
-     */
-    public Color RainbowWithAlpha(int alpha) {
+    public Color getColor(int alpha) {
 
         if (alpha < 0 || alpha > 255) return null;
 
         return new Color(RainbowColor.getRed(), RainbowColor.getGreen(), RainbowColor.getBlue(), alpha);
     }
 
-    public Color getRainbow() {
+    public Color getColor() {
         return new Color(RainbowColor.getRed(), RainbowColor.getGreen(), RainbowColor.getBlue());
     }
 

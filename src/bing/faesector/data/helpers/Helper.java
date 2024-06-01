@@ -5,7 +5,7 @@ import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 
-public class fae_Helper {
+public class Helper {
 
 
 

@@ -2,7 +2,7 @@ package bing.faesector.data.helpers;
 
 import com.fs.starfarer.api.Global;
 
-public class fae_Logger {
+public class Logger {
 
     public static boolean loggerEnabled = Global.getSettings().getBoolean("FAE_LoggerEnabled");
 

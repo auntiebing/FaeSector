@@ -5,7 +5,7 @@ package bing.faesector.data.helpers;
 
 import com.fs.starfarer.api.Global;
 
-public class fae_stringsManager {
+public class stringsManager {
     private static final String ML="faesector";
     
     public static String txt(String id){

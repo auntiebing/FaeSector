@@ -12,7 +12,7 @@ import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
-import static bing.faesector.data.helpers.fae_stringsManager.txt;
+import static bing.faesector.data.helpers.stringsManager.txt;
 
 public class fae_override extends BaseShipSystemScript {
 
