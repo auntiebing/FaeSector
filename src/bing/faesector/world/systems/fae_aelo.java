@@ -7,6 +7,8 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
@@ -128,14 +130,14 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
                 null
         );
 
-        SectorEntityToken fae_mining = system.addCustomEntity("fae_mining","Fae mining outpost","station_mining00", Factions.INDEPENDENT);
+        SectorEntityToken fae_mining = system.addCustomEntity("fae_mining","Fae mining outpost","station_mining00", "fairies");
         fae_mining.setCircularOrbitPointingDown(star,0,4150,135);
         MarketAPI fae_miningMarket = Global.getFactory().createMarket("fae_miningMarket","Fae mining outpost",4);
         fae_mining.setCustomDescriptionId("fae_mining");
         fae_mining.setMarket(fae_miningMarket);
         fae_miningMarket.setPrimaryEntity(fae_mining);
         //use helper method from other script to easily configure the market. feel free to copy it into your own project
-        fae_miningMarket = bing.faesector.world.systems.fae_AddMarketplace.addMarketplace( //A Market is separate to a Planet, and contains data about population, industries and conditions. This is a method from the other script in this mod, that will assign all marketplace conditions to the planet in one go, making it simple and easy
+        fae_miningMarket = fae_AddMarketplace.addMarketplace( //A Market is separate to a Planet, and contains data about population, industries and conditions. This is a method from the other script in this mod, that will assign all marketplace conditions to the planet in one go, making it simple and easy
                 "fairies", //Factions.INDEPENDENT references the id String of the Independent faction, so it is the same as writing "independent", but neater. This determines the Faction associated with this market
                 fae_mining, //the PlanetAPI variable that this market will be assigned to
                 null, //some mods and vanilla will have additional floating space stations or other entities, that when accessed, will open this marketplace. We don't have any associated entities for this method to add, so we leave null
@@ -163,6 +165,43 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
                 true, //if true, the planet will have visual junk orbiting and will play an ambient chatter audio track when the player is nearby
                 false //used by the method to make a market hidden like a pirate base, not recommended for generating markets in a core world
         );
+        fae_miningMarket.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+
+        // Rebel Leader
+        PersonAPI miniem = Global.getFactory().createPerson();
+        miniem.setId("miniem");
+        miniem.setFaction("fairies");
+        miniem.setGender(FullName.Gender.FEMALE);
+        miniem.setRankId(Ranks.FREEDOM_FIGHTER);
+        miniem.setPostId(Ranks.POST_BASE_COMMANDER);
+        miniem.setPersonality(Personalities.AGGRESSIVE);
+        miniem.setImportance(PersonImportance.HIGH);
+        miniem.getName().setFirst("Miniêm"); //'Flight of a dove'
+        miniem.getName().setLast("Vejan"); //'Flambeau'
+        Global.getSector().getImportantPeople().addPerson(miniem);
+        Global.getSector().getImportantPeople().getPerson("miniem").addTag("military");
+        miniem.setPortraitSprite(Global.getSettings().getSpriteName("characters", miniem.getId()));
+
+        fae_miningMarket.getCommDirectory().addPerson(miniem);
+        fae_miningMarket.getCommDirectory().getEntryForPerson(miniem).setHidden(false);
+        fae_miningMarket.addPerson(miniem);
+
+        // Cringe
+        PersonAPI kusakari = Global.getFactory().createPerson();
+        kusakari.setId("kusakari");
+        kusakari.setFaction("fairies");
+        kusakari.setGender(FullName.Gender.FEMALE);
+        kusakari.setRankId(Ranks.CITIZEN);
+        kusakari.setPostId(Ranks.POST_SCIENTIST);
+        kusakari.setPersonality(Personalities.RECKLESS);
+        kusakari.setImportance(PersonImportance.VERY_HIGH);
+        kusakari.getName().setFirst("Vaera");
+        kusakari.getName().setLast("1");
+        kusakari.setPortraitSprite(Global.getSettings().getSpriteName("characters", kusakari.getId()));
+
+        fae_miningMarket.getCommDirectory().addPerson(kusakari);
+        fae_miningMarket.getCommDirectory().getEntryForPerson(kusakari).setHidden(false);
+        fae_miningMarket.addPerson(kusakari);
 
         //add ocean planet
         PlanetAPI brinath = system.addPlanet( //assigns instance of newly created planet to variable planetOne
@@ -207,7 +246,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
         );
 
         //ocean planet moon
-        PlanetAPI fae_vilnârua = system.addPlanet( //assigns instance of newly created planet to variable planetOne
+        PlanetAPI fae_vilnarua = system.addPlanet( //assigns instance of newly created planet to variable planetOne
                 "fae_oceanmoon", //unique id string
                 brinath, //orbit focus for planet
                 "Vilnârua", //display name of planet
@@ -216,17 +255,17 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
                 60f, //planet size
                 900, //radius gap from the star
                 12); //number of in-game days for it to orbit once
-        fae_vilnârua.getMarket().addCondition(Conditions.THIN_ATMOSPHERE);
-        fae_vilnârua.getMarket().addCondition(Conditions.LOW_GRAVITY);
-        fae_vilnârua.getMarket().addCondition(Conditions.COLD);
-        fae_vilnârua.getMarket().addCondition(Conditions.POOR_LIGHT);
-        fae_vilnârua.setCustomDescriptionId("fae_oceanmoon"); //reference descriptions.csv
+        fae_vilnarua.getMarket().addCondition(Conditions.THIN_ATMOSPHERE);
+        fae_vilnarua.getMarket().addCondition(Conditions.LOW_GRAVITY);
+        fae_vilnarua.getMarket().addCondition(Conditions.COLD);
+        fae_vilnarua.getMarket().addCondition(Conditions.POOR_LIGHT);
+        fae_vilnarua.setCustomDescriptionId("fae_oceanmoon"); //reference descriptions.csv
 
         //fae capital
         PlanetAPI fae_arbora = system.addPlanet( //assigns instance of newly created planet to variable planetOne
                 "fae_arbora", //unique id string
                 star, //orbit focus for planet
-                "Arboranita", //display name of planet
+                "Arborantia", //display name of planet
                 "arbora_fae", //planet type id, comes from starsector-core/data/campaign/procgen/planet_gen_data.csv
                 20f, //starting angle in orbit
                 300f, //planet size
@@ -257,7 +296,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
                 "fairies", //Factions.INDEPENDENT references the id String of the Independent faction, so it is the same as writing "independent", but neater. This determines the Faction associated with this market
                 fae_arbora, //the PlanetAPI variable that this market will be assigned to
                 null, //some mods and vanilla will have additional floating space stations or other entities, that when accessed, will open this marketplace. We don't have any associated entities for this method to add, so we leave null
-                "Arboranita", //Display name of market
+                "Arborantia", //Display name of market
                 6, //population size
                 new ArrayList<>(Arrays.asList( //List of conditions for this method to iterate through and add to the market
                         Conditions.POPULATION_6,
@@ -287,6 +326,63 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
         );
         fae_capitalmarket.addIndustry(Industries.ORBITALWORKS,
                 Collections.singletonList(Items.PRISTINE_NANOFORGE));
+
+        // Admiral Velixie
+        PersonAPI velixie = Global.getFactory().createPerson();
+        velixie.setId("velixie");
+        velixie.setFaction("fairies");
+        velixie.setGender(FullName.Gender.FEMALE);
+        velixie.setRankId(Ranks.PILOT);
+        velixie.setPostId(Ranks.POST_OFFICER);
+        velixie.setImportance(PersonImportance.VERY_LOW);
+        velixie.setPersonality(Personalities.AGGRESSIVE);
+        velixie.getName().setFirst("Velixie");
+        velixie.getName().setLast("Xielie");
+        velixie.setPortraitSprite(Global.getSettings().getSpriteName("characters", velixie.getId()));
+        velixie.getStats().setLevel(1);
+        velixie.getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
+        Global.getSector().getImportantPeople().addPerson(velixie);
+
+        fae_capitalmarket.getCommDirectory().addPerson(velixie);
+        fae_capitalmarket.getCommDirectory().getEntryForPerson(velixie).setHidden(false);
+        fae_capitalmarket.addPerson(velixie);
+
+        // Queen Xintalvia
+        PersonAPI queen = Global.getFactory().createPerson();
+        queen.setId("queen");
+        queen.setFaction("fairies");
+        queen.setGender(FullName.Gender.FEMALE);
+        queen.setRankId(Ranks.FACTION_LEADER);
+        queen.setPostId(Ranks.POST_ADMINISTRATOR);
+        queen.setImportance(PersonImportance.VERY_HIGH);
+        queen.setPersonality(Personalities.AGGRESSIVE);
+        queen.getName().setFirst("Xintalvia");
+        queen.getName().setLast("Xielie");
+        queen.setPortraitSprite(Global.getSettings().getSpriteName("characters", queen.getId()));
+        Global.getSector().getImportantPeople().addPerson(queen);
+        Global.getSector().getImportantPeople().getPerson("queen").addTag("trade");
+
+        fae_capitalmarket.getCommDirectory().addPerson(queen);
+        fae_capitalmarket.getCommDirectory().getEntryForPerson(queen).setHidden(false);
+        fae_capitalmarket.addPerson(queen);
+
+        // Commander Lilith
+        PersonAPI lilith = Global.getFactory().createPerson();
+        lilith.setId("lilith");
+        lilith.setFaction("fairies");
+        lilith.setGender(FullName.Gender.FEMALE);
+        lilith.setRankId(Ranks.GROUND_MAJOR);
+        lilith.setPostId(Ranks.POST_BASE_COMMANDER);
+        lilith.setImportance(PersonImportance.HIGH);
+        lilith.getName().setFirst("Lilith");
+        lilith.getName().setLast("Star");
+        Global.getSector().getImportantPeople().addPerson(lilith);
+        Global.getSector().getImportantPeople().getPerson("lilith").addTag("military");
+        lilith.setPortraitSprite(Global.getSettings().getSpriteName("characters", lilith.getId()));
+
+        fae_capitalmarket.getCommDirectory().addPerson(lilith);
+        fae_capitalmarket.getCommDirectory().getEntryForPerson(lilith).setHidden(false);
+        fae_capitalmarket.addPerson(lilith);
 
         //one of capital's many moons
         PlanetAPI fae_moon_one = system.addPlanet( //assigns instance of newly created planet to variable planetOne
@@ -364,7 +460,7 @@ public class fae_aelo implements SectorGeneratorPlugin { //A SectorGeneratorPlug
         PlanetAPI fae_moon_six = system.addPlanet( //assigns instance of newly created planet to variable planetOne
                 "fae_moon_six", //unique id string
                 fae_arbora, //orbit focus for planet
-                "Đathir", //display name of planet
+                "Dathir", //display name of planet
                 "barren", //planet type id, comes from starsector-core/data/campaign/procgen/planet_gen_data.csv
                 300f, //starting angle in orbit
                 100f, //planet size

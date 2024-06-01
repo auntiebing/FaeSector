@@ -3,6 +3,7 @@
 	"specClass":"projectile",	
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
+	"onFireEffect":"bing.faesector.data.weapons.fae_tasuanEffect",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
 	"length":50.0,
 	"hitGlowRadius":72,

@@ -46,6 +46,6 @@
 		250
     ]
   },
-  "fireSoundOne": "gigacannon_charge",
-  "fireSoundTwo": "gigacannon_fire"
+  "fireSoundOne": "fae_glint",
+  "fireSoundTwo": "fae_glint_release"
 }

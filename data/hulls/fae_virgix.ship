@@ -11,6 +11,9 @@
   "shieldCenter": [-2, -0],
   "shieldRadius": 24,
   "viewOffset": 0,
+  "builtInMods": [
+    "fae_EscapePod"
+  ],
   "weaponSlots": [
     {
       "id": "WS1",

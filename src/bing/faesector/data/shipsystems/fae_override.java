@@ -18,11 +18,11 @@ public class fae_override extends BaseShipSystemScript {
 
     private static Map mag = new HashMap();
     static {
-        mag.put(HullSize.FIGHTER, 0.60f);
-        mag.put(HullSize.FRIGATE, 0.75f);
-        mag.put(HullSize.DESTROYER, 0.75f);
-        mag.put(HullSize.CRUISER, 0.80f);
-        mag.put(HullSize.CAPITAL_SHIP, 0.80f);
+        mag.put(HullSize.FIGHTER, 0.33f);
+        mag.put(HullSize.FRIGATE, 0.33f);
+        mag.put(HullSize.DESTROYER, 0.33f);
+        mag.put(HullSize.CRUISER, 0.5f);
+        mag.put(HullSize.CAPITAL_SHIP, 0.5f);
     }
 
     protected Object STATUSKEY1 = new Object();
@@ -94,8 +94,8 @@ public class fae_override extends BaseShipSystemScript {
         stats.getDeceleration().unmodify(id);
     }
     private final float
-            ROF_BONUS_PERCENT = 50,
-            BEAM_BONUS_PERCENT = 50,
+            ROF_BONUS_PERCENT = 0.5f,
+            BEAM_BONUS_PERCENT = 0.5f,
             FLUX_REDUCTION = 0.5f;
 
     private final String TXT1 = txt("redirection1");

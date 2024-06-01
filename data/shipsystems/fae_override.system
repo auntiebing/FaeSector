@@ -3,7 +3,7 @@
 	"type":"STAT_MOD",
 	"aiType":"WEAPON_BOOST",
 	
-	"statsScript":"bing.faesector.data.shipsystems.fae_shield",
+	"statsScript":"bing.faesector.data.shipsystems.fae_override",
 	
 	"jitterUnderColor":[80,250,170,155],
 	"jitterUnderCopies":25,
