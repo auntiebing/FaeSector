@@ -1,19 +1,13 @@
 package bing.faesector.data.tests;
 
-import bing.faesector.data.render.renderClassesFolder.RingData;
-import bing.faesector.data.render.renderFunctions.RingRenderer;
+import bing.faesector.data.render.renderClassesFolder.Ring;
 import cmu.gui.CMUKitUI;
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
 import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.ViewportAPI;
-import com.fs.starfarer.api.graphics.SpriteAPI;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.util.EnumSet;
-
-import static bing.faesector.data.render.RenderMisc.*;
-import static bing.faesector.data.render.renderFunctions.RingRenderer.*;
 
 public class fae_RingRenderTest extends BaseCombatLayeredRenderingPlugin {
 
@@ -35,14 +29,13 @@ public class fae_RingRenderTest extends BaseCombatLayeredRenderingPlugin {
     public void render(CombatEngineLayers layer, ViewportAPI viewport) {
         CMUKitUI.openGLForMisc(); // gl open
 
-        RingData ring = new RingData();
+        Ring ring = new Ring();
 
         ring.center = sourceLocation;
         ring.width = 50f;
         ring.shape = new Vector2f(OvalX, OvalY);
 
-        DrawRing(ring, viewport);
-
+        ring.DrawRing(viewport);
         CMUKitUI.closeGLForMisc(); // gl open
     }
 

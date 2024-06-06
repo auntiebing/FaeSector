@@ -51,12 +51,14 @@ public class fae_TestEFS extends BaseEveryFrameCombatPlugin {
 //                        250
 //                );
 
-                fae_RingRenderTest plugin = new fae_RingRenderTest(
-                                                new Vector2f(center),
-                        VectorUtils.getAngle(Global.getCombatEngine().getPlayerShip().getMouseTarget(), Global.getCombatEngine().getPlayerShip().getLocation()),
-                        500,
-                        250
-                );
+//                fae_RingRenderTest plugin = new fae_RingRenderTest(
+//                                                new Vector2f(center),
+//                        VectorUtils.getAngle(Global.getCombatEngine().getPlayerShip().getMouseTarget(), Global.getCombatEngine().getPlayerShip().getLocation()),
+//                        500,
+//                        250
+//                );
+
+                fae_glRotateFTest plugin = new fae_glRotateFTest();
 
                 Global.getCombatEngine().addLayeredRenderingPlugin(plugin);
 

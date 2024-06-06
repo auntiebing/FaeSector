@@ -2,8 +2,10 @@ package bing.faesector.data.render;
 
 import bing.faesector.data.render.renderClassesFolder.SquareData;
 import bing.faesector.data.render.renderClassesFolder.RenderMode;
+import bing.faesector.data.render.renderClassesFolder.vertex.VertexData;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
+import com.fs.starfarer.api.util.Misc;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -14,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static bing.faesector.data.render.renderFunctions.SquareRenderer.DrawSquare;
-import static org.lwjgl.opengl.GL11.glColor4f;
+import static org.lwjgl.opengl.GL11.*;
 
 public class RenderMisc {
 
@@ -124,6 +126,11 @@ public class RenderMisc {
 
     public static void SetColor(Color color) {
         glColor4f(color.getRed() / 255f, color.getGreen() / 255f, color.getBlue() / 255f, color.getAlpha() / 255f);
+    }
+
+    public static void Transform(Vector2f loc, ViewportAPI viewport) {
+        float mult = viewport.getViewMult();
+        glTranslatef(loc.x / mult, loc.y / mult, 0);
     }
 
 }

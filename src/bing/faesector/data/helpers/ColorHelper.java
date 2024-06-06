@@ -43,6 +43,26 @@ public class ColorHelper {
         return new Color(color.getRed(), color.getGreen(), color.getBlue(), Statics.random.nextInt(255));
     }
 
+    public static Color setAlpha(Color color, short alpha) {
+        //why the FUCK theresnt a default fuction for setting values?
+        return new Color(color.getRed(), color.getGreen(), color.getBlue(), alpha);
+    }
+
+    public static Color setRed(Color color, short red) {
+        //why the FUCK theresnt a default fuction for setting values?
+        return new Color(red, color.getGreen(), color.getBlue());
+    }
+
+    public static Color setGreen(Color color, short green) {
+        //why the FUCK theresnt a default fuction for setting values?
+        return new Color(color.getRed(), green, color.getBlue());
+    }
+
+    public static Color setBlue(Color color, short blue) {
+        //why the FUCK theresnt a default fuction for setting values?
+        return new Color(color.getRed(), color.getGreen(), blue);
+    }
+
     static public Color hslColor(float h, float s, float l) {//https://stackoverflow.com/a/33947547/21149029
         float q, p, r, g, b;//https://hslpicker.com/#f00
 

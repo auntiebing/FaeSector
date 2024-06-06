@@ -1,4 +1,4 @@
-package bing.faesector.data.hullmods;
+package bing.faesector.data.hullmods.fae_Buffer;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
@@ -16,6 +16,10 @@ public class fae_Buffer extends BaseHullMod {
     @Override
     public void advanceInCombat(ShipAPI ship, float amount) {
 
+        if (ship.getCustomData().get("runOnce") == null) {
+            Global.getCombatEngine().addLayeredRenderingPlugin(new fae_BufferRender(ship, buffDist));
+            ship.setCustomData("runOnce", false);
+        }
 
         for (ShipAPI shipi : Global.getCombatEngine().getShips()) {
             if (!shipi.isAlly()) {

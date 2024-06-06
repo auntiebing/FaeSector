@@ -9,6 +9,7 @@ import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
 import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
+import com.fs.starfarer.api.util.Misc;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 import penner.easing.Circ;
@@ -62,7 +63,9 @@ public class fae_OvalRiftRenderer extends BaseCombatLayeredRenderingPlugin {
         glEnable(GL_BLEND);//for transparency
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//https://www.codeproject.com/Questions/512386/TransparentplustextureplusinplusOpenGL
         glEnable(GL_TEXTURE_2D);
+
         glBegin(GL_TRIANGLE_FAN);
+
         RenderMisc.SetColor(backgroundOfRift.getColor());
 
         Vector2f locF = worldVectorToScreenVector(sourceLocation, viewport);

@@ -1,6 +1,5 @@
 package bing.faesector.data.tests;
 
-import bing.faesector.data.render.renderClassesFolder.RingData;
 import cmu.gui.CMUKitUI;
 import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
 import com.fs.starfarer.api.combat.CombatEngineLayers;
