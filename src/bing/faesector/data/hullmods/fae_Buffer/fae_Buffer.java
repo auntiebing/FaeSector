@@ -6,8 +6,10 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class fae_Buffer extends BaseHullMod {
 
@@ -22,7 +24,11 @@ public class fae_Buffer extends BaseHullMod {
         }
 
         for (ShipAPI shipi : Global.getCombatEngine().getShips()) {
-            if (!shipi.isAlly()) {
+            if (Objects.equals(shipi.getId(), ship.getId())) {
+                continue;
+            }
+
+            if (shipi.getOwner() != ship.getOwner()) {
                 continue;
             }
 
