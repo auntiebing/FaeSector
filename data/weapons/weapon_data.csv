@@ -9,6 +9,8 @@ Lirim Plasma Launcher,lirim,2,0.5,5000,1500,,200,200,7,30,8,24,0.25,3,ENERGY,0,,
 Calâth Interdictor,calath,3,0.25,10000,1200,,1000,500,75,10,3,1,,,ENERGY,0,,0,5,1,,0,0,0,0,,400,100,3.5,500,,,"STRIKE,GUIDED_POOR","missile7, strike4, midline_bp",,ARnD,,Interdiction,Fast,Poor,,,,,,,TRUE,9
 Calâth Twin Rack,calath_dual,3,0.10,10000,1200,,1000,500,75,10,6,2,,,ENERGY,0,,0,5,1,,0,0,0,0,,400,100,3.5,500,,,"STRIKE,GUIDED_POOR","missile7, strike4, midline_bp",,ARnD,,Interdiction,Fast,Poor,,,,,,,TRUE,9
 ,fae_Z_threat,0,,,,,5000,,25,,10,,,,ENERGY,0,,,1,1,,,,,,,0,0,9999,1000,,,SYSTEM,,,ARnD,,,,,,,,,,,,38.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ball,fae_ball_pd,3,0.10,10000,1200,,1000,500,75,10,6,2,,,ENERGY,0,,0,5,1,,0,0,0,0,,400,100,3.5,500,,,"STRIKE,GUIDED_POOR","missile7, strike4, midline_bp",,ARnD,,Interdiction,Fast,Poor,,,,,,,TRUE,9
 #FIGHTER GUNS#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Balphus CIWS,balphus,2,,5000,750,,50,,5,45,6,80,10,10,ENERGY,10,,0,0.1,1,,0,5,0.5,5,,1200,,,25,,,"PD, SYSTEM","energy6, midline_bp, merc, ind",,Ixinuma Incorporated,,Anti Small Craft,,,,,,,,,,
 Mequas Blaster,mequas,1,,3000,700,,45,,10,10,5,,,,KINETIC,20,,0,0.35,1,,2.5,5,1,5,,800,,,25,,,SYSTEM,"kinetic8, midline_bp, merc, ind",,Ixinuma Incorporated,,General,,,,,,,,,,

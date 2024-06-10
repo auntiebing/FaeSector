@@ -1,0 +1,69 @@
+{
+  "id": "ball_proj",
+  "specClass": "missile",
+  "missileType": "MISSILE",
+  "collisionClass": "MISSILE_NO_FF",
+  "collisionClassByFighter": "PROJECTILE_FIGHTER",
+  "onFireEffect": "bing.faesector.data.weapons.ball.fae_ball_onFire",
+  "length": 64,
+  "hitGlowRadius": 72,
+  "width": 64,
+  "fringeColor": [
+    190,
+    90,
+    145,
+    190
+  ],
+  "coreColor": [
+    200,
+    120,
+    165,
+    220
+  ],
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 5,
+  "bulletSprite": "graphics/missiles/fae_ball_proj.png",
+  "sprite": "graphics/missiles/fae_ball_proj.png",
+  "size": [
+    64,
+    64
+  ],
+  "center": [
+    32,
+    32
+  ],
+  "collisionRadius": 32, #
+  #
+#  VİSUALS 
+  "explosionColor": [
+    123,
+    145,
+    122,
+    255
+  ], # purely visual, will get a white additively blended core on top of this color
+  "explosionRadius": 175, # purely visual
+	#"alwaysAccelerate":true,
+  "reduceDamageWhileFading": true,
+	#"noCollisionWhileFading":true,
+  "useHitGlowWhenDestroyed": true,
+  "fizzleOnReachingWeaponRange": true,
+  "dudProbabilityOnFlameout": 0,
+  "armingTime": 0,
+  "flameoutTime": 4,
+  "noEngineGlowTime": 4,
+  "fadeTime": 4,
+  "glowColor": [
+    160,
+    80,
+    20,
+    75
+  ],
+  "glowRadius": 75,
+  "engineSpec": {
+    "turnAcc": 2000,
+    "turnRate": 500,
+    "acc": 2000,
+    "dec": 2000
+  },
+  "engineSlots": []
+}

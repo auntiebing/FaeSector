@@ -2,7 +2,7 @@
 	"AT_LoggerEnabled": true,
 	"plugins": {
 		"fae_test_efs": "bing.faesector.data.tests.fae_TestEFS",
-		"fae_timer_efs": "bing.faesector.data.fae_CombatTimerEFS"
+		"fae_efs": "bing.faesector.data.fae_CombatEFS"
 	},
 	"graphics": {
 		"characters": {

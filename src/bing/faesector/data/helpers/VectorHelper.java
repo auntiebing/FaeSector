@@ -66,4 +66,19 @@ public class VectorHelper {
         return aproachedVector;
     }
 
+    //in square
+    public static boolean isNear(Vector2f is, Vector2f near, float radius) {
+
+        if (
+                toPositive(is.x - near.x) > radius || toPositive(is.y - near.y) > radius
+        ) {
+            return false;
+        }
+        return true;
+
+    }
+
+    public static float toPositive(float num) {
+        return (num > 0) ? num : -num;
+    }
 }
