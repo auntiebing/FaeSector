@@ -1,5 +1,8 @@
 package bing.faesector.data.tests;
 
+import bing.faesector.data.tests.renderTests.fae_OvalRiftRenderer;
+import bing.faesector.data.tests.shaderTests.Shader;
+import bing.faesector.data.tests.shaderTests.fae_ShaderTestRender;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -58,7 +61,13 @@ public class fae_TestEFS extends BaseEveryFrameCombatPlugin {
 //                        250
 //                );
 
-                fae_glRotateFTest plugin = new fae_glRotateFTest();
+//                fae_glRotateFTest plugin = new fae_glRotateFTest();
+
+
+                fae_ShaderTestRender plugin = new fae_ShaderTestRender(
+//                        new Shader().loadVertexShader("data/gfx/default.vert").loadFragShader("data/gfx/defaultFrag/defaultFrag.frag").link()
+                        new Shader().loadVertexShader("data/gfx", "default.vert").loadFragShader("data/gfx/test1", "test1-O.frag").link()
+                );
 
                 Global.getCombatEngine().addLayeredRenderingPlugin(plugin);
 

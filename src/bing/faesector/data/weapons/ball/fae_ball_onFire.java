@@ -12,8 +12,6 @@ public class fae_ball_onFire implements OnFireEffectPlugin {
     @Override
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 
-        Global.getCombatEngine().getCustomData().
-
         List<fae_ball_listener> listeners = Global.getCombatEngine().getListenerManager().getListeners(fae_ball_listener.class);
 
         if (listeners.isEmpty()) {

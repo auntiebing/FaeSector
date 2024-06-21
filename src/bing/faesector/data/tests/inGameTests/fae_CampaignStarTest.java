@@ -1,4 +1,4 @@
-package bing.faesector.data.tests;
+package bing.faesector.data.tests.inGameTests;
 
 
 import bing.faesector.data.helpers.ColorHelper;

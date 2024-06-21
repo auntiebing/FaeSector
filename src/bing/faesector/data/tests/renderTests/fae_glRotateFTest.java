@@ -1,4 +1,4 @@
-package bing.faesector.data.tests;
+package bing.faesector.data.tests.renderTests;
 
 import cmu.gui.CMUKitUI;
 import cmu.plugins.RenderDebug;

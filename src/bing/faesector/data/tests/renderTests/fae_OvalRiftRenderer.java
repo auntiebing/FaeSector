@@ -1,4 +1,4 @@
-package bing.faesector.data.tests;
+package bing.faesector.data.tests.renderTests;
 
 import bing.faesector.data.Statics;
 import bing.faesector.data.helpers.PerlinNoise;

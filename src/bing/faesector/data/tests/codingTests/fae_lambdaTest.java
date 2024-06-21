@@ -1,4 +1,4 @@
-package bing.faesector.data.tests;
+package bing.faesector.data.tests.codingTests;
 
 import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)

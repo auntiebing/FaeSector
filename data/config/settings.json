@@ -50,7 +50,9 @@
 			"SRD_trail_helix": "graphics/fae/fx/SRD_trail_helix.png",
 
 			"fae_tasuan_ring1": "graphics/fae/fx/VIC_ring_1.png",
-			"fae_tasuan_ring2": "graphics/fae/fx/VIC_ring_2.png"
+			"fae_tasuan_ring2": "graphics/fae/fx/VIC_ring_2.png",
+
+			"fae_null": "graphics/fae/fx/fae_null.png"
 		}
 	},
 	"fae_color_teal": [ 70, 210, 185, 255 ],

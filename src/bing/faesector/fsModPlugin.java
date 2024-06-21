@@ -1,21 +1,16 @@
 package bing.faesector;
 
-import bing.faesector.data.helpers.ScriptBuilder;
-import bing.faesector.data.tests.fae_CampaignStarTest;
+import bing.faesector.data.tests.inGameTests.fae_CampaignStarTest;
 import bing.faesector.data.weapons.fae_calathAI;
 import bing.faesector.world.FaesectorGen;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.CampaignPlugin;
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import exerelin.campaign.SectorManager;
-import org.codehaus.commons.compiler.CompileException;
-import org.codehaus.janino.ExpressionEvaluator;
-import org.codehaus.janino.ScriptEvaluator;
 
 public class fsModPlugin extends BaseModPlugin {
 
