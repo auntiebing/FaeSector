@@ -1,16 +1,12 @@
-package bing.faesector.data.tests.shaderTests;
+package bing.faesector.data.render.shader;
 
-import bing.faesector.data.Statics;
 import bing.faesector.data.helpers.Logger;
 import com.fs.starfarer.api.Global;
-import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Vector2f;
 import org.lwjgl.util.vector.Vector3f;
 import org.lwjgl.util.vector.Vector4f;
 
 import java.awt.*;
-import java.io.File;
-import java.nio.file.Path;
 import java.util.*;
 import java.util.List;
 

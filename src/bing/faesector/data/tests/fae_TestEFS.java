@@ -1,12 +1,10 @@
 package bing.faesector.data.tests;
 
-import bing.faesector.data.tests.renderTests.fae_OvalRiftRenderer;
-import bing.faesector.data.tests.shaderTests.Shader;
+import bing.faesector.data.render.shader.Shader;
 import bing.faesector.data.tests.shaderTests.fae_ShaderTestRender;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.input.InputEventAPI;
-import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.util.List;

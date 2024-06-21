@@ -1,40 +1,22 @@
 package bing.faesector.data.tests.shaderTests;
 
 import bing.faesector.data.Statics;
-import bing.faesector.data.render.RenderMisc;
+import bing.faesector.data.render.shader.Shader;
 import cmu.gui.CMUKitUI;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
 import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
-import org.dark.shaders.util.ShaderLib;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
-import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import bing.faesector.data.render.renderClassesFolder.SquareData;
-import bing.faesector.data.render.renderClassesFolder.RenderMode;
-import bing.faesector.data.render.renderClassesFolder.vertex.VertexData;
-import com.fs.starfarer.api.combat.ViewportAPI;
-import com.fs.starfarer.api.graphics.SpriteAPI;
-import com.fs.starfarer.api.util.Misc;
-import org.lazywizard.lazylib.MathUtils;
-import org.lazywizard.lazylib.VectorUtils;
-import org.lwjgl.util.vector.Vector2f;
-
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static bing.faesector.data.render.RenderMisc.worldVectorToScreenVector;
-import static bing.faesector.data.render.renderFunctions.SquareRenderer.DrawSquare;
 import static org.lwjgl.opengl.GL11.*;
 
 public class fae_ShaderTestRender extends BaseCombatLayeredRenderingPlugin {
