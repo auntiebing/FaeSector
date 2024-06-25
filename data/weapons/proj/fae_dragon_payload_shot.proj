@@ -1,0 +1,41 @@
+{
+	"id":"fae_dragon_payload_shot",
+	"specClass":"missile",	
+	"missileType":"MISSILE",	
+	"sprite":"",
+	"size":[2,2],	
+	"center": [2,2],
+	"collisionRadius":2,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,255,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":30, # purely visual
+	"engineSpec":{"turnAcc":9000,
+				  "turnRate":300,
+				  "acc":9000,
+				  "dec":9000},	
+	"engineSlots":[
+	
+	 {
+	 "id":"ES1", 
+     "angle": 180,
+      "length": 5,
+      "loc": [0,0],
+      "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[0,255,255,255],
+						"contrailDuration":.5,
+						"contrailWidthMult":2,
+						"contrailWidthAddedFractionAtEnd":-1,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":15, # min segment length, in pixels
+						"contrailMaxSpeedMult":0f,
+						"contrailAngularVelocityMult":0f,
+						"contrailSpawnDistMult":0, # how far away from engine it starts
+						"contrailColor":[110,210,220,255],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+      "width": 10
+    }
+
+	]
+}

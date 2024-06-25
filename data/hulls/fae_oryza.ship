@@ -6,14 +6,13 @@
   "style": "MIDLINE",
   "height": 152,
   "width": 208,
-  "center": [ 104, 87.5 ],
+  "center": [104, 87.5],
   "collisionRadius": 166.5,
-  "shieldCenter": [ 0, -0 ],
+  "shieldCenter": [0, -0],
   "shieldRadius": 137,
   "viewOffset": 0,
   "builtInMods": [
-    "targetingunit",
-    "fae_Buffer"
+    "targetingunit"
   ],
   "builtInWings": [
     "fae_virgix_wing"
@@ -38,7 +37,7 @@
       "mount": "TURRET",
       "arc": 180,
       "angle": -45,
-      "locations": [ 46.5, -18 ]
+      "locations": [46.5, -18]
     },
     {
       "id": "WS0004",
@@ -47,7 +46,7 @@
       "mount": "TURRET",
       "arc": 180,
       "angle": 45,
-      "locations": [ 46.5, 18 ]
+      "locations": [46.5, 18]
     },
     {
       "id": "WS0005",
@@ -56,7 +55,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": -125.5,
-      "locations": [ -3.5, -21 ]
+      "locations": [-3.5, -21]
     },
     {
       "id": "WS0006",
@@ -65,7 +64,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": 125.5,
-      "locations": [ -3.5, 21 ]
+      "locations": [-3.5, 21]
     },
     {
       "id": "WS0001",
@@ -74,7 +73,7 @@
       "mount": "TURRET",
       "arc": 200,
       "angle": 90,
-      "locations": [ 19.5, 23 ]
+      "locations": [19.5, 23]
     },
     {
       "id": "WS0002",
@@ -83,12 +82,12 @@
       "mount": "TURRET",
       "arc": 200,
       "angle": -90,
-      "locations": [ 19.5, -23 ]
+      "locations": [19.5, -23]
     }
   ],
   "engineSlots": [
     {
-      "location": [ -63.5, 6 ],
+      "location": [-63.5, 6],
       "length": 24,
       "width": 11,
       "angle": 180,
@@ -96,7 +95,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [ -63.5, -6 ],
+      "location": [-63.5, -6],
       "length": 24,
       "width": 11,
       "angle": -180,
@@ -104,7 +103,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [ -59.5, -18.5 ],
+      "location": [-59.5, -18.5],
       "length": 38,
       "width": 11,
       "angle": 180,
@@ -112,7 +111,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [ -59.5, 18.5 ],
+      "location": [-59.5, 18.5],
       "length": 38,
       "width": 11,
       "angle": -180,

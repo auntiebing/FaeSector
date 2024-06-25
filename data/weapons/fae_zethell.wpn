@@ -5,10 +5,10 @@
   "type": "ENERGY",
   "size": "LARGE",
   "everyFrameEffect": "bing.faesector.data.weapons.fae_zodiac",
-  "turretSprite": "graphics/weapons/zethell_turret.png",
-  "turretGlowSprite": "graphics/weapons/zethell_glow.png",
-  "hardpointSprite": "graphics/weapons/zethell_turret.png",
-  "hardpointGlowSprite": "graphics/weapons/zethell_glow.png",
+	"turretSprite":"graphics/fx/empty.png",
+	"turretGlowSprite":"graphics/fx/empty.png",
+	"hardpointSprite":"graphics/fx/empty.png",
+	"hardpointGlowSprite":"graphics/fx/empty.png",
   "glowColor": [
     80,
     215,
@@ -30,7 +30,7 @@
     0
   ],
   "barrelMode": "ALTERNATING",
-  "animationType": "GLOW_AND_FLASH",
+  "animationType": "GLOW",
   "autocharge": true,
   "muzzleFlashSpec": {
     "length": 50,

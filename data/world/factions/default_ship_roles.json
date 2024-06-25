@@ -1,22 +1,23 @@
 {
 	"combatLarge": {
 		"fae_lupine_Brute": 10,
-		"fae_lupine_Interdictor": 10
+		"fae_lupine_Interdictor": 10,
+		"fae_oryza_Standard": 10,
+		"fae_terleth_Storm": 10
 	},
 	"combatSmall": {
 		"fae_lupine_Brute": 10,
-		"fae_lupine_Interdictor": 10
+		"fae_oryza_Standard": 10
 	},
 	"TradeLarge": {
 		"fae_lupine_Brute": 10,
-		"fae_lupine_Interdictor": 10
+		"fae_dahlia_Standard": 10,
+		"fae_celvas_Standard": 10
 	},
 	"TradeSmall": {
-		"fae_lupine_Brute": 10,
-		"fae_lupine_Interdictor": 10
+		"fae_lupine_Brute": 10
 	},
 	"Solo": {
-		"fae_lupine_Brute": 10,
-		"fae_lupine_Interdictor": 10
+		"fae_terleth_Storm": 10
 	}
 }

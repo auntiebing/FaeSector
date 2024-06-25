@@ -59,12 +59,12 @@
 			{"file":"sounds/effects/fae_blaster_03.ogg","pitch":0.97,"volume":0.33}
 	],
     "fae_light":[
-            {"file":"sounds/effects/fae_light_01.ogg","pitch":1.09,"volume":0.5},
-			{"file":"sounds/effects/fae_light_01.ogg","pitch":1,"volume":0.53},
-			{"file":"sounds/effects/fae_light_01.ogg","pitch":0.97,"volume":0.55},
-			{"file":"sounds/effects/fae_light_02.ogg","pitch":1.09,"volume":0.5},
-			{"file":"sounds/effects/fae_light_02.ogg","pitch":1,"volume":0.53},
-			{"file":"sounds/effects/fae_light_02.ogg","pitch":0.97,"volume":0.55}
+            {"file":"sounds/effects/fae_light_01.ogg","pitch":1.25,"volume":0.3},
+			{"file":"sounds/effects/fae_light_01.ogg","pitch":1.21,"volume":0.31},
+			{"file":"sounds/effects/fae_light_01.ogg","pitch":1.17,"volume":0.33},
+			{"file":"sounds/effects/fae_light_02.ogg","pitch":1.25,"volume":0.3},
+			{"file":"sounds/effects/fae_light_02.ogg","pitch":1.21,"volume":0.31},
+			{"file":"sounds/effects/fae_light_02.ogg","pitch":1.17,"volume":0.33}
 		],
 	"fae_tasuan":[
 			{"file":"sounds/effects/fae_tasuan_01.ogg","pitch":1.03,"volume":1.08},
@@ -77,12 +77,12 @@
 	"fae_tasuan_chargeup":[
 		{"file":"sounds/effects/fae_tasuan_chargeup.ogg","pitch":1.0, "volume":0.25},
 		{"file":"sounds/effects/fae_tasuan_chargeup.ogg","pitch":0.97, "volume":0.25},
-		{"file":"sounds/effects/fae_tasuan_chargeup.ogg","pitch":0.94, "volume":0.25},
+		{"file":"sounds/effects/fae_tasuan_chargeup.ogg","pitch":0.94, "volume":0.25}
 	],
 	"fae_tasuan_chargedown":[
 		{"file":"sounds/effects/fae_tasuan_chargedown.ogg","pitch":1.0, "volume":0.25},
 		{"file":"sounds/effects/fae_tasuan_chargedown.ogg","pitch":0.97, "volume":0.25},
-		{"file":"sounds/effects/fae_tasuan_chargedown.ogg","pitch":0.94, "volume":0.25},
+		{"file":"sounds/effects/fae_tasuan_chargedown.ogg","pitch":0.94, "volume":0.25}
 	],
 	"fae_rotary_fire":[
 		{"file":"sounds/effects/fae_rotary_fire.ogg","pitch":1,"volume":1.0}
@@ -109,16 +109,16 @@
 
 	"fae_torpedo_loop":
 	[
-		{"file":"sounds/effects/fae_chime_loop.ogg","pitch":1,"volume":0.5},
+		{"file":"sounds/effects/fae_chime_loop.ogg","pitch":1,"volume":0.5}
 	],
 	"fae_cloud_loop":
 	[
-		{"file":"sounds/effects/fae_cloudsong.ogg","pitch":1,"volume":0.5},
+		{"file":"sounds/effects/fae_cloudsong.ogg","pitch":1,"volume":0.5}
 	],
 
 	"fae_torpedo_impact":
 	[
-		{"file":"sounds/effects/fae_torpedo_impact.ogg","pitch":1,"volume":0.9},
+		{"file":"sounds/effects/fae_torpedo_impact.ogg","pitch":1,"volume":0.9}
 	],
 
 	#Ship Systems#

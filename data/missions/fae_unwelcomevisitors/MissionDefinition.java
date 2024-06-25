@@ -38,7 +38,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// "Tactical Objectives" on the mission detail screen
 		api.addBriefingItem("Destroy the invaders. Let none survive to tell the tale.");
 		api.addBriefingItem("Outnumbered, but not outgunned. Pick your fights carefully.");
-		api.addBriefingItem("Be wary of missiles and strike fighters. Utilize the EMP of your Zelênthar Boost to escape these hazards.");
+		api.addBriefingItem("Be wary of missiles and strike fighters. Utilize your Zelênthar Boost to escape danger.");
 
 		// Set up the player's fleet
 		FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, "fae_lupine_Brute", FleetMemberType.SHIP, "XRS Holdma", true);

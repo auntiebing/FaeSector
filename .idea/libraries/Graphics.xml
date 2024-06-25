@@ -3,7 +3,9 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../GraphicsLib/jars/Graphics.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../GraphicsLib/jars/Graphics.jar!/javadoc" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>

@@ -20,7 +20,7 @@
 		"arbora_fae":{
 		"name":"Magical",
 		"aOrAn":"a",
-		"tilt":30, # left-right (>0 tilts to the left)
+		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
 		"planetColor":[255,255,255,255],

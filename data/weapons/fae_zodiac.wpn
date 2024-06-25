@@ -1,0 +1,41 @@
+{
+	"id":"fae_zodiac",
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"LARGE",
+  "turretSprite": "graphics/weapons/zethell_turret.png",
+  "turretGlowSprite": "graphics/weapons/zethell_glow.png",
+  "hardpointSprite": "graphics/weapons/zethell_turret.png",
+  "hardpointGlowSprite": "graphics/weapons/zethell_glow.png",
+    "glowColor": [
+    80,
+    215,
+    190,
+    250
+  ],
+	"hardpointOffsets":[14, 0],
+	"turretOffsets":[8, 0],
+	"hardpointAngleOffsets":[0],
+	"turretAngleOffsets":[0],	
+	"interruptibleBurst":false,
+	"barrelMode": "ALTERNATING",
+	  "animationType": "GLOW_AND_FLASH",
+	  "autocharge": true,
+	  "muzzleFlashSpec": {
+		"length": 50,
+		"spread": 5,
+		"particleSizeMin": 20,
+		"particleSizeRange": 20,
+		"particleDuration": 0.25,
+		"particleCount": 25,
+		"particleColor": [
+			80,
+			215,
+			190,
+			250
+		]
+	  },
+		"projectileSpecId":"zodiac_shot",
+		"fireSoundOne": "gigacannon_charge",
+		"fireSoundTwo": "gigacannon_fire"
+}

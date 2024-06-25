@@ -18,6 +18,9 @@
     "fae_virgix_wing",
     "fae_virgix_wing"
   ],
+  "builtInWeapons": {
+    "ENG1": "fae_engineRenderer"
+  },
   "weaponSlots": [
     {
       "id": "LS1",
@@ -150,40 +153,53 @@
         14.5, -27,
         14.5, -35.5
       ]
+    },
+    {
+      "id": "ENG1",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-28.5, -0]
     }
   ],
   "engineSlots": [
     {
-      "location": [-130, -29],
-      "length": 51,
-      "width": 15,
-      "angle": -180,
-      "contrailSize": 15,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-130, 29],
-      "length": 51,
-      "width": 15,
+      "location": [-130.5, -29],
+      "length": 53,
+      "width": 14,
       "angle": 180,
-      "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "contrailSize": 14,
+      "style": "CUSTOM",
+      "styleId": "FAE_SMALL"
     },
     {
-      "location": [-131, -17],
-      "length": 50,
-      "width": 15,
-      "angle": 180,
-      "contrailSize": 15,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-131, 17],
-      "length": 50,
-      "width": 15,
+      "location": [-130.5, 29],
+      "length": 53,
+      "width": 14,
       "angle": -180,
-      "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "contrailSize": 14,
+      "style": "CUSTOM",
+      "styleId": "FAE_SMALL"
+    },
+    {
+      "location": [-131.5, -17],
+      "length": 52,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "CUSTOM",
+      "styleId": "FAE_SMALL"
+    },
+    {
+      "location": [-131.5, 17],
+      "length": 52,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "CUSTOM",
+      "styleId": "FAE_SMALL"
     }
   ],
   "bounds": [

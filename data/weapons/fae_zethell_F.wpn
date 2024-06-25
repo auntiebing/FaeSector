@@ -1,5 +1,5 @@
 {
-  "animationType": "GLOW_AND_FLASH",
+  "animationType": "GLOW",
   "autocharge": true,
   "barrelMode": "ALTERNATING",
   "displayArcRadius": 600,

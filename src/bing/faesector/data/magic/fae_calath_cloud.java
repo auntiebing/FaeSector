@@ -116,7 +116,7 @@ public class fae_calath_cloud extends BaseEveryFrameCombatPlugin {
 
         float level = getTimeLevel()*effectLevel(ship.getLocation());
 
-        engine.applyDamage(ship, fae_misc.getRandomPointOnShip(ship), dps*amount*level, damageType, emp*amount*level, false, false, source, false);
+        engine.applyDamage(ship, fae_misc.getRandomPointOnShip(ship), dps*amount*level, damageType, emp*amount*level, true, false, source, false);
         MutableShipStatsAPI stats = ship.getMutableStats();
         stats.getMaxSpeed().modifyMult(id, 1f-level);
 
