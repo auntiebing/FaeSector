@@ -18,7 +18,7 @@
 			"fae_stream_layer1":"graphics/fae/fx/trails/fae_stream_layer1.png",
 			"fae_stream_layer2":"graphics/fae/fx/trails/fae_stream_layer2.png",
 
-			"fae_FX_engineflame32":"graphics/fae/fx/engineflame32.png",
+			"fae_FX_engineflame32":"graphics/fae/fx/engine/engineflame32.png",
 
 			"fae_FX_star0":"graphics/starscape/star.png",
 			"fae_FX_star1":"graphics/starscape/star1.png",
@@ -49,11 +49,16 @@
 			"fae_tasuan_ring1":"graphics/fae/fx/VIC_ring_1.png",
 			"fae_tasuan_ring2":"graphics/fae/fx/VIC_ring_2.png",
 
-			"fae_engineflare":"graphics/fae/fx/fae_engineflare.png",
-			"fae_ringengine":"graphics/fae/fx/fae_ringengine.png",
-			"fae_ring":"graphics/fae/fx/fae_ring.png",
-			"fae_enginesparks":"graphics/fae/fx/fae_enginesparks.png",
-			"fae_ring2":"graphics/fae/fx/fae_ring2.png",
+			"cyan_front":"graphics/fae/fx/engine/cyan_front.png",
+			"cyan_rear":"graphics/fae/fx/engine/cyan_rear.png",
+			"green_front":"graphics/fae/fx/engine/cyan_front.png",
+			"green_rear":"graphics/fae/fx//engine/cyan_rear.png",
+			"pink_front":"graphics/fae/fx/engine/cyan_front.png",
+			"pink_rear":"graphics/fae/fx/engine/cyan_rear.png",
+			"red_front":"graphics/fae/fx/engine/cyan_front.png",
+			"red_rear":"graphics/fae/fx/engine/cyan_rear.png",
+			"white_middle":"graphics/fae/fx/engine/white_middle.png",
+			"engine_sparks":"graphics/fae/fx/engine/engine_sparks.png",
 
 			"fae_null": "graphics/fae/fx/fae_null.png"
 		}

@@ -18,31 +18,40 @@ public class fae_engineRenderer implements EveryFrameWeaponEffectPlugin {
     public static Map<String, List<engineLayerData>> layers(){
         Map<String, List<engineLayerData>> result = new HashMap<>();
 
-        result.put("FAE_SMALL",  //sprite, width, length,
+        result.put("PINK_RING",  //sprite, width, length, variation, idfk yet, make it stay still, change angle, how fast it appears, how fast it goes away, colour.
                 Arrays.asList(
-                        new engineLayerData("fae_enginesparks", new Vector2f(0.75f, 1f),0.08f, 0.1f,false,0,0.05f, 4f,   Color.PINK),
+                        new engineLayerData("pink_front", new Vector2f(1.25f, 1.25f),0f, 0f,false,0,2f, 2f,   Color.pink),
 
-                        //new engineLayerData("fae_ring", new Vector2f(1f, 1f), 0.05f,0.05f, false,0,2f, 2f,  Color.PINK),
+                        new engineLayerData("white_middle", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.white),
 
-                        new engineLayerData("fae_ring2", new Vector2f(1f, 0.75f), 0f,0f, false,0,2f, 2f,  Color.PINK)
+                        new engineLayerData("pink_rear", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.pink)
                         )
                 );
-        result.put("FAE_MEDIUM",
+        result.put("BLUE_RING",
                 Arrays.asList(
-                        new engineLayerData("fae_enginesparks", new Vector2f(0.75f, 1.5f),0.08f, 0.1f,false,0,0.05f, 4f,   Color.PINK),
+                        new engineLayerData("cyan_front", new Vector2f(1.25f, 1.25f),0f, 0f,false,0,2f, 2f,   Color.white),
 
-                        //new engineLayerData("fae_ring", new Vector2f(1f, 1f), 0.05f,0.05f, false,0,2f, 2f,  Color.PINK),
+                        new engineLayerData("white_middle", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.cyan),
 
-                        new engineLayerData("fae_ring2", new Vector2f(1f, 0.75f), 0f,0f, false,0,2f, 2f,  Color.PINK)
+                        new engineLayerData("cyan_rear", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.white)
                 )
         );
-        result.put("FAE_LARGE",
+        result.put("GREEN_RING",
                 Arrays.asList(
-                        new engineLayerData("fae_enginesparks", new Vector2f(0.75f, 1.5f),0.08f, 0.1f,false,0,0.05f, 4f,   Color.PINK),
+                        new engineLayerData("green_front", new Vector2f(1.25f, 1.25f),0f, 0f,false,0,2f, 2f,   Color.cyan),
 
-                        //new engineLayerData("fae_ring", new Vector2f(1f, 1f), 0.05f,0.05f, false,0,2f, 2f,  Color.PINK),
+                        new engineLayerData("white_middle", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.green),
 
-                        new engineLayerData("fae_ring2", new Vector2f(1.25f, 1.25f), 0.05f,0.05f, false,0,2f, 2f,  Color.PINK)
+                        new engineLayerData("green_rear", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.cyan)
+                )
+        );
+        result.put("RED_RING",
+                Arrays.asList(
+                        new engineLayerData("red_front", new Vector2f(1.25f, 1.25f),0f, 0f,false,0,2f, 2f,   Color.white),
+
+                        new engineLayerData("white_middle", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.cyan),
+
+                        new engineLayerData("red_rear", new Vector2f(1.25f, 1.25f), 0f,0f, false,0,2f, 2f,  Color.white)
                 )
         );
 
@@ -143,7 +152,7 @@ public class fae_engineRenderer implements EveryFrameWeaponEffectPlugin {
 
             //System.out.println("engine is rendering");
             float l1 = of(level, 0.3f);
-            Vector2f size = new Vector2f(2f*engine.getEngineSlot().getLength()*sizeMult.getY()*l1*m.rn(randomVar), engine.getEngineSlot().getWidth()*sizeMult.getX()*l1*m.rn(randomVar));
+            Vector2f size = new Vector2f(engine.getEngineSlot().getLength()*sizeMult.getY()*l1*m.rn(randomVar), engine.getEngineSlot().getWidth()*sizeMult.getX()*l1*m.rn(randomVar));
             //System.out.println(randomVar);
             Vector2f point = engine.getLocation();
             float angle = engine.getEngineSlot().getAngle()+ship.getFacing()+angleOffset;

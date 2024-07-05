@@ -86,7 +86,7 @@ public class fae_zodiac implements EveryFrameWeaponEffectPlugin, OnFireEffectPlu
 
         if(weapon.getChargeLevel()>0f && !hasFired){
 
-            point = MathUtils.getPointOnCircumference(weapon.getLocation(), 300f, weapon.getSlot().getAngle()+weapon.getShip().getFacing());
+            point = MathUtils.getPointOnCircumference(weapon.getLocation(), 0f, weapon.getSlot().getAngle()+weapon.getShip().getFacing());
             //chargeup
             level = weapon.getChargeLevel();
             if(level<signOffset()){

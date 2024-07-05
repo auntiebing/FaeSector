@@ -167,39 +167,57 @@
   "engineSlots": [
     {
       "location": [-130.5, -29],
-      "length": 53,
-      "width": 14,
+      "length": 50,
+      "width": 16,
       "angle": 180,
-      "contrailSize": 14,
+      "contrailSize": 16,
       "style": "CUSTOM",
-      "styleId": "FAE_SMALL"
+      "styleId": "FAE_PURPLE"
     },
     {
       "location": [-130.5, 29],
-      "length": 53,
-      "width": 14,
+      "length": 50,
+      "width": 16,
       "angle": -180,
-      "contrailSize": 14,
+      "contrailSize": 16,
       "style": "CUSTOM",
-      "styleId": "FAE_SMALL"
+      "styleId": "FAE_PURPLE"
     },
     {
       "location": [-131.5, -17],
-      "length": 52,
-      "width": 14,
+      "length": 60,
+      "width": 12,
       "angle": 180,
-      "contrailSize": 14,
+      "contrailSize": 12,
       "style": "CUSTOM",
-      "styleId": "FAE_SMALL"
+      "styleId": "FAE_PURPLE"
     },
     {
       "location": [-131.5, 17],
-      "length": 52,
-      "width": 14,
+      "length": 60,
+      "width": 12,
       "angle": -180,
-      "contrailSize": 14,
+      "contrailSize": 12,
       "style": "CUSTOM",
-      "styleId": "FAE_SMALL"
+      "styleId": "FAE_PURPLE"
+    },
+    {
+      "location": [-126.5, -23],
+      "length": 53,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "CUSTOM",
+      "styleId": "GREEN_RING"
+    },
+    {
+      "location": [-126.5, 23],
+      "length": 53,
+      "width": 31,
+      "angle": -180,
+      "contrailSize": 31,
+      "style": "CUSTOM",
+      "styleId": "GREEN_RING"
     }
   ],
   "bounds": [

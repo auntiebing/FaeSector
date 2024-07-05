@@ -1,7 +1,8 @@
 {
 	"id":"fae_zodiac",
 	"specClass":"projectile",
-	"type":"ENERGY",
+	"type":"MISSILE",
+	"mountTypeOverride":"ENERGY",
 	"size":"LARGE",
   "turretSprite": "graphics/weapons/zethell_turret.png",
   "turretGlowSprite": "graphics/weapons/zethell_glow.png",
