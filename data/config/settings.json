@@ -60,7 +60,15 @@
 			"white_middle":"graphics/fae/fx/engine/white_middle.png",
 			"engine_sparks":"graphics/fae/fx/engine/engine_sparks.png",
 
-			"fae_null": "graphics/fae/fx/fae_null.png"
+			"fae_null": "graphics/fae/fx/fae_null.png",
+
+			"fae_eye0": "graphics/fae/fx/fae_TheObservant0.png",
+			"fae_eye1": "graphics/fae/fx/fae_TheObservant1.png",
+			"fae_eye2": "graphics/fae/fx/fae_TheObservant2.png"
+		},
+		"debug": {
+			"fae_debug_image": "graphics/debug/fae_placeholder.png",
+			"fae_debug_image2": "graphics/debug/fae_mrSelim.png"
 		}
 	},
 	"fae_color_teal": [ 70, 210, 185, 255 ],

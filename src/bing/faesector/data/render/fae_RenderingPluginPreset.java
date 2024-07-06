@@ -1,4 +1,4 @@
-package bing.faesector.data.tests.renderTests;
+package bing.faesector.data.render;
 
 import cmu.gui.CMUKitUI;
 import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
@@ -6,6 +6,9 @@ import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.ViewportAPI;
 
 import java.util.EnumSet;
+
+import static org.lwjgl.opengl.GL11.glPopMatrix;
+import static org.lwjgl.opengl.GL11.glPushMatrix;
 
 public class fae_RenderingPluginPreset extends BaseCombatLayeredRenderingPlugin {
 
@@ -15,7 +18,11 @@ public class fae_RenderingPluginPreset extends BaseCombatLayeredRenderingPlugin 
     public void render(CombatEngineLayers layer, ViewportAPI viewport) {
         CMUKitUI.openGLForMisc(); // gl open
 
+        glPushMatrix();
 
+
+
+        glPopMatrix();
 
         CMUKitUI.closeGLForMisc(); // gl open
     }

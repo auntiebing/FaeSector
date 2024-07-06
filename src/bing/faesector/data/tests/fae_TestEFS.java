@@ -1,7 +1,9 @@
 package bing.faesector.data.tests;
 
 import bing.faesector.data.render.shader.Shader;
+import bing.faesector.data.tests.frameBuffer.fae_FrameBufferTest;
 import bing.faesector.data.tests.shaderTests.fae_ShaderTestRender;
+import bing.faesector.data.tests.sphere.fae_sphereTest;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -64,8 +66,12 @@ public class fae_TestEFS extends BaseEveryFrameCombatPlugin {
 
                 fae_ShaderTestRender plugin = new fae_ShaderTestRender(
 //                        new Shader().loadVertexShader("data/gfx/default.vert").loadFragShader("data/gfx/defaultFrag/defaultFrag.frag").link()
-                        new Shader().loadVertexShader("data/gfx", "default.vert").loadFragShader("data/gfx/test1", "test1-O.frag").link()
+                        new Shader().loadVertexShader("data/gfx/default.vert").loadFragShader("data/gfx/Voronoi/Voronoi.frag").link()
                 );
+
+//                fae_sphereTest plugin = new fae_sphereTest();
+
+//                fae_FrameBufferTest plugin = new fae_FrameBufferTest();
 
                 Global.getCombatEngine().addLayeredRenderingPlugin(plugin);
 

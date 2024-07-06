@@ -133,4 +133,42 @@ public class RenderMisc {
         glTranslatef(loc.x / mult, loc.y / mult, 0);
     }
 
+    public static void Transform(Vector2f loc) {
+        glTranslatef(loc.x, loc.y, 0);
+    }
+
+    public static List<Vector2f> GetTextureLocs(SpriteAPI tex, Vector2f center) {
+
+        return new ArrayList<Vector2f>(
+                Arrays.asList(
+                        new Vector2f(center.x - tex.getWidth() / 2f, center.y + tex.getHeight() / 2f),
+                        new Vector2f(center.x + tex.getWidth() / 2f, center.y + tex.getHeight() / 2f),
+                        new Vector2f(center.x - tex.getWidth() / 2f, center.y - tex.getHeight() / 2f),
+                        new Vector2f(center.x + tex.getWidth() / 2f, center.y - tex.getHeight() / 2f)
+
+//                        new Vector2f(center.x - tex.getTextureWidth() / 2, center.y + tex.getTextureHeight() / 2),
+//                        new Vector2f(center.x + tex.getTextureWidth() / 2, center.y + tex.getTextureHeight() / 2),
+//                        new Vector2f(center.x - tex.getTextureWidth() / 2, center.y - tex.getTextureHeight() / 2),
+//                        new Vector2f(center.x + tex.getTextureWidth() / 2, center.y - tex.getTextureHeight() / 2)
+                )
+        );
+    }
+
+    public static List<Vector2f> GetTextureLocs(SpriteAPI tex) {
+
+        return new ArrayList<Vector2f>(
+                Arrays.asList(
+                        new Vector2f(-tex.getWidth() / 2, +tex.getHeight() / 2),
+                        new Vector2f(+tex.getWidth() / 2, +tex.getHeight() / 2),
+                        new Vector2f(-tex.getWidth() / 2, -tex.getHeight() / 2),
+                        new Vector2f(+tex.getWidth() / 2, -tex.getHeight() / 2)
+
+//                        new Vector2f(-tex.getTextureWidth() / 2, +tex.getTextureHeight() / 2),
+//                        new Vector2f(+tex.getTextureWidth() / 2, +tex.getTextureHeight() / 2),
+//                        new Vector2f(-tex.getTextureWidth() / 2, -tex.getTextureHeight() / 2),
+//                        new Vector2f(+tex.getTextureWidth() / 2, -tex.getTextureHeight() / 2)
+                )
+        );
+    }
+
 }

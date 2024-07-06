@@ -2,6 +2,8 @@ package bing.faesector.data.render.shader;
 
 import bing.faesector.data.helpers.Logger;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.graphics.SpriteAPI;
+import org.lwjgl.opengl.GL13;
 import org.lwjgl.util.vector.Vector2f;
 import org.lwjgl.util.vector.Vector3f;
 import org.lwjgl.util.vector.Vector4f;
@@ -10,7 +12,7 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-import static org.lwjgl.opengl.GL11.GL_FALSE;
+import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL20.*;
 
 public class Shader {//https://youtu.be/q_dS3JuoeDw
@@ -24,9 +26,9 @@ public class Shader {//https://youtu.be/q_dS3JuoeDw
         ProgramID = glCreateProgram();
     }
 
-    public Shader loadVertexShader(String vertexShaderFilePath, String fileName) {
+    public Shader loadVertexShader(String vertexShaderFilePath) {
         try {
-            String vert = Global.getSettings().loadText(vertexShaderFilePath + "/" + fileName);
+            String vert = Global.getSettings().loadText(vertexShaderFilePath);
             createVertexShader(vert);
         } catch (Exception ignore) {
         } finally {
@@ -53,14 +55,15 @@ public class Shader {//https://youtu.be/q_dS3JuoeDw
         return this;
     }
 
-    public Shader loadFragShader(String fragShaderFilePath, String fileName) {
+    public Shader loadFragShader(String fragShaderFilePath) {
         try {
-            String frag = Global.getSettings().loadText(fragShaderFilePath + "/" + fileName);
+            String frag = Global.getSettings().loadText(fragShaderFilePath);
 
             frag = ShaderInclude(frag, fragShaderFilePath);
             boolean doesContainInclude = false;
             if (frag.contains("#include")) {
                 doesContainInclude = true;
+                Logger.log(Shader.class, "-/-/-/ COULD NOT LOAD SHADER PROPERLY /-/-/-\nSHADER: \n" + frag + "\nSHADER PATH: \n" + fragShaderFilePath);
             }
 
 
@@ -133,44 +136,76 @@ public class Shader {//https://youtu.be/q_dS3JuoeDw
     //region variable setting
     private Map<String, Integer> variables = new HashMap<>();
 
-    public void SetFloat(String variableName, float value) {
+    public Shader SetFloat(String variableName, float value) {
         if (variables.containsKey(variableName)) {
             glUniform1f(variables.get(variableName), value);
         } else {
             variables.put(variableName, glGetUniformLocation(ProgramID, variableName));
             SetFloat(variableName, value);
         }
+        return this;
     }
 
-    public void SetVector2f(String variableName, Vector2f vec2f) {
+    public Shader SetVector2f(String variableName, Vector2f vec2f) {
         if (variables.containsKey(variableName)) {
             glUniform2f(variables.get(variableName), vec2f.x, vec2f.y);
         } else {
             variables.put(variableName, glGetUniformLocation(ProgramID, variableName));
             SetVector2f(variableName, vec2f);
         }
+        return this;
     }
 
-    public void SetVector3f(String variableName, Vector3f vec3f) {
+    public Shader SetVector3f(String variableName, Vector3f vec3f) {
         if (variables.containsKey(variableName)) {
             glUniform3f(variables.get(variableName), vec3f.x, vec3f.y, vec3f.z);
         } else {
             variables.put(variableName, glGetUniformLocation(ProgramID, variableName));
             SetVector3f(variableName, vec3f);
         }
+        return this;
     }
 
-    public void SetColor(String variableName, Color color) {
+    public Shader SetColor(String variableName, Color color) {
         SetVector4f(variableName, new Vector4f(color.getRed() / 255f, color.getGreen() / 255f, color.getBlue() / 255f, color.getAlpha() / 255f));
+        return this;
     }
 
-    public void SetVector4f(String variableName, Vector4f vec4f) {
+    public Shader SetVector4f(String variableName, Vector4f vec4f) {
         if (variables.containsKey(variableName)) {
             glUniform4f(variables.get(variableName), vec4f.x, vec4f.y, vec4f.z, vec4f.w);
         } else {
             variables.put(variableName, glGetUniformLocation(ProgramID, variableName));
             SetVector4f(variableName, vec4f);
         }
+        return this;
+    }
+
+    public Shader SetTexture(String variableName, SpriteAPI texture, int textureID) {
+        if (variables.containsKey(variableName)) {
+            glUniform1i(variables.get(variableName), textureID);
+            GL13.glActiveTexture(GL13.GL_TEXTURE0 + textureID);
+
+            texture.bindTexture();
+        } else {
+            variables.put(variableName, glGetUniformLocation(ProgramID, variableName));
+            SetTexture(variableName, texture, textureID);
+        }
+        return this;
+    }
+
+    public Shader SetTexture(String variableName, int texture, int textureID) {
+        if (variables.containsKey(variableName)) {
+            glUniform1i(variables.get(variableName), textureID);
+            GL13.glActiveTexture(GL13.GL_TEXTURE0 + textureID);
+
+            glBindTexture(GL_TEXTURE_2D, texture);
+
+        } else {
+            variables.put(variableName, glGetUniformLocation(ProgramID, variableName));
+            SetTexture(variableName, texture, textureID);
+        }
+        return this;
     }
 
     //endregion
