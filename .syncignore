@@ -1,0 +1,6 @@
+# CodeSync won't sync the files in the .syncignore. It follows same format as .gitignore.
+*.class
+jars/faesector.jar
+jars/FaeSector.jar
+*.class
+jars/FaeSector.jar

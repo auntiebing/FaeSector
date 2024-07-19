@@ -119,6 +119,8 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 
 	private IntervalUtil pi1 = new IntervalUtil(freq, freq);
 	private IntervalUtil pi2 = new IntervalUtil(0f, 0f);
+	private boolean burstSound = false;
+	private boolean endSound = false;
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 
 		if (stats.getEntity() instanceof ShipAPI) {
@@ -285,6 +287,10 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 				fae_misc.spawnCircularBlastWave(enginePoint, size, angle+180f, 1.5f, 2000f, 70f, 10, colorList(),GL11.GL_SRC_ALPHA, GL11.GL_ONE);
 			}
 			if(state == State.ACTIVE){
+				if (!burstSound) {
+					Global.getSoundPlayer().playSound("fae_zelenthar_burst", 1f, 1f, ship.getLocation(), new Vector2f());
+					burstSound = true;
+				}
 				pushNearbyObjects(ship);
 
 
@@ -309,6 +315,10 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 
 			}
 			if (state == State.OUT) {
+				if (!endSound) {
+					Global.getSoundPlayer().playSound("fae_zelenthar_end", 1f, 1f, ship.getLocation(), new Vector2f());
+					endSound = true;
+				}
 				stats.getMaxSpeed().unmodify(id); // to slow down ship to its regular top speed while powering drive down
 				stats.getMaxTurnRate().unmodify(id);
 				float l1 = effectLevel;
@@ -324,13 +334,17 @@ public class fae_heavenDrive extends BaseShipSystemScript {
 			}
 		}
 	}
-
+	public void resetSoundFlag() {
+		burstSound = false;
+		endSound = false;
+	}
 	public void unapply(MutableShipStatsAPI stats, String id) {
 		stats.getMaxSpeed().unmodify(id);
 		stats.getMaxTurnRate().unmodify(id);
 		stats.getTurnAcceleration().unmodify(id);
 		stats.getAcceleration().unmodify(id);
 		stats.getDeceleration().unmodify(id);
+		resetSoundFlag();
 	}
 
 	public StatusData getStatusData(int index, State state, float effectLevel) {

@@ -12,6 +12,8 @@ import bing.faesector.data.magic.fae_calath_cloud;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class fae_calath_proj extends BaseEveryFrameCombatPlugin {
     private final CombatEngineAPI engine;
@@ -34,12 +36,16 @@ public class fae_calath_proj extends BaseEveryFrameCombatPlugin {
         sparkInterval.advance(amount);
 
         if(!fae_misc.isProjValid(missile)){
-            float dur = 10f;
             Global.getSoundPlayer().playSound("fae_torpedo_impact", 1f, 1f, missile.getLocation(), new Vector2f());
-            float dmg = 0.01f*missile.getDamageAmount()/dur;
-            float emp = 0.01f*missile.getEmpAmount()/dur;
-            new fae_calath_cloud(missile.getLocation(), 800f, dur, 0.1f, 0.2f, dmg, emp, missile.getDamageType(), missile.getSource());
-
+            final float dur = 10f;
+            final float dmg = 0.2f*missile.getDamageAmount()/dur;
+            final float emp = 0.2f*missile.getEmpAmount()/dur;
+            Timer timer = new Timer();
+            timer.schedule(new TimerTask() {
+                public void run() {
+                    new fae_calath_cloud(missile.getLocation(), 800f, dur, 0.1f, 0.2f, dmg, emp, missile.getDamageType(), missile.getSource());
+                }
+            }, 900);
             engine.removePlugin(this);
         }
 

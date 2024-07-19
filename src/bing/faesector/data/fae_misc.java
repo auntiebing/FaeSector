@@ -87,6 +87,7 @@ public class fae_misc {
     }
 
     public static Vector2f getRandomPointOnShip(ShipAPI ship){
+        if(ship.getExactBounds()==null)return ship.getLocation();
         WeightedRandomPicker<BoundsAPI.SegmentAPI> seg = new WeightedRandomPicker<>();
         seg.addAll(ship.getExactBounds().getSegments());
         BoundsAPI.SegmentAPI s = seg.pick();

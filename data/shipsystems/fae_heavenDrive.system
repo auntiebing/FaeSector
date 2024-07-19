@@ -14,8 +14,8 @@
 	"clampTurnRateAfter":true,
 	"clampMaxSpeedAfter":false,
 
-	"useSound":"system_plasma_jets",
-	"loopSound":"system_plasma_jets_loop",
+	"useSound":"fae_zelenthar_start",
+	"loopSound":"fae_zelenthar_loop",
 	"outOfUsesSound":"engine_disabled",
 	
 	"aiHints":{
