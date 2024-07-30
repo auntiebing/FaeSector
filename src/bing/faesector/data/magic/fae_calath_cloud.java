@@ -85,6 +85,11 @@ public class fae_calath_cloud extends BaseEveryFrameCombatPlugin {
         }
         if(!affectedShips.isEmpty()){
             for(ShipAPI s: new ArrayList<>(affectedShips)){
+                if(s.getCollisionClass()!=CollisionClass.SHIP
+                ||s.getCollisionClass()==CollisionClass.FIGHTER)
+                    continue;
+                if(s.getCollisionRadius()<=0)continue;
+                if(s.getExactBounds()==null)continue;
                 if(MathUtils.getDistance(s.getLocation(), point)<size){
                     apply(s, amount);
 
